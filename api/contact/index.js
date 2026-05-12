@@ -1,11 +1,80 @@
 /**
  * PrioraOS contact form handler.
- * Zero npm dependencies — calls Azure Communication Services Email REST API
- * directly with HMAC-SHA256 signing (Node.js built-in crypto + https).
+ * Proxies to the Locum Station backend which handles ACS email sending.
  */
 'use strict';
-const https  = require('https');
-const crypto = require('crypto');
+const https = require('https');
+
+const ENQUIRY_LABELS = {
+  'institutional-partnership': 'Institutional Partnership',
+  'international-deployment' : 'International Deployment',
+  'investment'               : 'Investment',
+  'research-collaboration'   : 'Research Collaboration',
+  'media'                    : 'Media',
+  'other'                    : 'Other',
+};
+
+function post(url, payload) {
+  return new Promise((resolve, reject) => {
+    const bodyStr = JSON.stringify(payload);
+    const parsed  = new URL(url);
+    const opts = {
+      hostname: parsed.hostname,
+      port    : 443,
+      path    : parsed.pathname,
+      method  : 'POST',
+      headers : {
+        'Content-Type'  : 'application/json',
+        'Content-Length': Buffer.byteLength(bodyStr),
+      },
+    };
+    const req = https.request(opts, (res) => {
+      let data = '';
+      res.on('data', (d) => { data += d; });
+      res.on('end', () => resolve({ status: res.statusCode, body: data }));
+    });
+    req.on('error', reject);
+    req.write(bodyStr);
+    req.end();
+  });
+}
+
+module.exports = async function (context, req) {
+  const { name, email, organisation, role, enquiryType, message } = req.body || {};
+
+  if (!name || !email || !organisation || !role || !enquiryType || !message) {
+    context.res = {
+      status : 400,
+      headers: { 'Content-Type': 'application/json' },
+      body   : JSON.stringify({ error: 'All fields are required.' }),
+    };
+    return;
+  }
+
+  const subject = `[PrioraOS] ${ENQUIRY_LABELS[enquiryType] || enquiryType} — ${name}`;
+
+  try {
+    const result = await post('https://api.locumstation.co.uk/api/contact', {
+      name,
+      email,
+      organisation,
+      role,
+      subject,
+      message,
+    });
+    context.log(`Proxied contact form: status=${result.status}`);
+  } catch (err) {
+    context.log.error('Proxy error:', err && err.message ? err.message : String(err));
+    // Non-fatal — still return 200 to the user
+  }
+
+  context.res = {
+    status : 200,
+    headers: { 'Content-Type': 'application/json' },
+    body   : JSON.stringify({ success: true }),
+  };
+};
+
 
 /* ── ACS HMAC-SHA256 signed request ─────────────────────────────────────── */
 function acsRequest({ endpoint, accessKey, from, to, subject, html }) {
