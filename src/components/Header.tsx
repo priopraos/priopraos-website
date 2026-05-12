@@ -90,8 +90,9 @@ const Header = () => {
                   className={`text-sm font-semibold py-2 px-4 rounded-lg transition-all duration-300 ${
                     location.pathname === item.to
                       ? 'text-yellow-400 bg-blue-50 shadow-md'
-                      : 'text-blue-900 hover:text-yellow-400'
+                      : 'text-blue-900 hover:text-yellow-400 hover:bg-blue-50'
                   }`}
+                  style={{ backgroundColor: 'transparent' }}
                 >
                   {item.label}
                 </Link>
