@@ -1,11 +1,164 @@
 /**
  * PrioraOS contact form handler.
- * Uses zero npm dependencies — calls Azure Communication Services Email REST
- * API directly via Node.js built-in https + crypto modules.
+ * Zero npm dependencies — calls Azure Communication Services Email REST API
+ * directly with HMAC-SHA256 signing (Node.js built-in crypto + https).
  */
 'use strict';
 const https  = require('https');
 const crypto = require('crypto');
+
+/* ── ACS HMAC-SHA256 signed request ─────────────────────────────────────── */
+function acsRequest({ endpoint, accessKey, from, to, subject, html }) {
+  const base     = endpoint.replace(/\/$/, '');
+  const url      = new URL(base);
+  const hostname = url.hostname;
+  const apiPath  = '/emails:send?api-version=2023-03-31';
+
+  const bodyStr     = JSON.stringify({
+    senderAddress: from,
+    recipients: { to: [{ address: to }] },
+    content: { subject, html },
+  });
+
+  const utcDate     = new Date().toUTCString();
+  const contentHash = crypto.createHash('sha256').update(bodyStr, 'utf8').digest('base64');
+
+  // ACS signed headers order: x-ms-date;host;x-ms-content-sha256
+  const stringToSign = ['POST', apiPath, `${utcDate};${hostname};${contentHash}`].join('\n');
+  const keyBytes     = Buffer.from(accessKey, 'base64');
+  const signature    = crypto.createHmac('sha256', keyBytes).update(stringToSign, 'utf8').digest('base64');
+
+  const reqHeaders = {
+    'Content-Type'          : 'application/json',
+    'Content-Length'        : Buffer.byteLength(bodyStr),
+    'host'                  : hostname,
+    'x-ms-date'             : utcDate,
+    'x-ms-content-sha256'   : contentHash,
+    'Authorization'         : `HMAC-SHA256 SignedHeaders=x-ms-date;host;x-ms-content-sha256&Signature=${signature}`,
+    'Repeatability-Request-ID'   : crypto.randomUUID(),
+    'Repeatability-First-Sent'   : utcDate,
+  };
+
+  return new Promise((resolve, reject) => {
+    const req = https.request(
+      { hostname, port: 443, path: apiPath, method: 'POST', headers: reqHeaders },
+      (res) => {
+        let data = '';
+        res.on('data', (d) => { data += d; });
+        res.on('end', () => {
+          if (res.statusCode === 202) {
+            resolve({ ok: true });
+          } else {
+            reject(new Error(`ACS HTTP ${res.statusCode}: ${data.slice(0, 300)}`));
+          }
+        });
+      },
+    );
+    req.on('error', reject);
+    req.write(bodyStr);
+    req.end();
+  });
+}
+
+/* ── HTML escaping ───────────────────────────────────────────────────────── */
+function esc(s) {
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+/* ── Main handler ────────────────────────────────────────────────────────── */
+module.exports = async function (context, req) {
+  const { name, email, organisation, role, enquiryType, message } = req.body || {};
+
+  if (!name || !email || !organisation || !role || !enquiryType || !message) {
+    context.res = {
+      status: 400,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ error: 'All fields are required.' }),
+    };
+    return;
+  }
+
+  const connStr = process.env.AZURE_COMMUNICATION_CONNECTION_STRING || '';
+  const inbox   = process.env.CONTACT_EMAIL || 'contact@prioraos.com';
+  const from    = process.env.SMTP_FROM     || 'DoNotReply@prioraos.com';
+
+  const enquiryLabels = {
+    'institutional-partnership': 'Institutional Partnership',
+    'international-deployment' : 'International Deployment',
+    'investment'               : 'Investment',
+    'research-collaboration'   : 'Research Collaboration',
+    'media'                    : 'Media',
+    'other'                    : 'Other',
+  };
+  const enquiryLabel = enquiryLabels[enquiryType] || enquiryType;
+
+  if (connStr) {
+    const epMatch  = connStr.match(/endpoint=([^;]+)/i);
+    const keyMatch = connStr.match(/accesskey=([^;]+)/i);
+
+    if (epMatch && keyMatch) {
+      const endpoint  = epMatch[1];
+      const accessKey = keyMatch[1];
+
+      const teamHtml = `
+<div style="font-family:Arial,sans-serif;max-width:620px;color:#1a1a1a">
+  <div style="background:#003087;padding:24px 28px;border-radius:8px 8px 0 0">
+    <h2 style="color:#fff;margin:0;font-size:18px">New Enquiry — prioraos.com</h2>
+  </div>
+  <div style="background:#f8f9fc;padding:28px;border:1px solid #e5e7eb;border-top:none;border-radius:0 0 8px 8px">
+    <table style="width:100%;border-collapse:collapse;margin-bottom:20px">
+      <tr><td style="padding:8px 12px;font-weight:600;width:130px;border:1px solid #e5e7eb">Name</td><td style="padding:8px 12px;border:1px solid #e5e7eb">${esc(name)}</td></tr>
+      <tr><td style="padding:8px 12px;font-weight:600;background:#f3f4f6;border:1px solid #e5e7eb">Email</td><td style="padding:8px 12px;background:#f3f4f6;border:1px solid #e5e7eb">${esc(email)}</td></tr>
+      <tr><td style="padding:8px 12px;font-weight:600;border:1px solid #e5e7eb">Organisation</td><td style="padding:8px 12px;border:1px solid #e5e7eb">${esc(organisation)}</td></tr>
+      <tr><td style="padding:8px 12px;font-weight:600;background:#f3f4f6;border:1px solid #e5e7eb">Role</td><td style="padding:8px 12px;background:#f3f4f6;border:1px solid #e5e7eb">${esc(role)}</td></tr>
+      <tr><td style="padding:8px 12px;font-weight:600;border:1px solid #e5e7eb">Enquiry Type</td><td style="padding:8px 12px;border:1px solid #e5e7eb">${esc(enquiryLabel)}</td></tr>
+    </table>
+    <div style="background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:16px">
+      <p style="font-weight:600;margin:0 0 8px;color:#003087">Message</p>
+      <p style="margin:0;line-height:1.7;white-space:pre-wrap">${esc(message)}</p>
+    </div>
+    <p style="margin:16px 0 0;font-size:11px;color:#9ca3af">via prioraos.com/contact</p>
+  </div>
+</div>`;
+
+      const confirmHtml = `
+<div style="font-family:Arial,sans-serif;max-width:620px;color:#1a1a1a">
+  <div style="background:#003087;padding:24px 28px;border-radius:8px 8px 0 0">
+    <h2 style="color:#fff;margin:0;font-size:18px">Enquiry Received — PrioraOS</h2>
+  </div>
+  <div style="background:#f8f9fc;padding:28px;border:1px solid #e5e7eb;border-top:none;border-radius:0 0 8px 8px">
+    <p>Hi ${esc(name)},</p>
+    <p>Thank you for getting in touch with PrioraOS. We have received your enquiry and will respond as soon as possible.</p>
+    <hr style="border:none;border-top:1px solid #e5e7eb;margin:20px 0">
+    <p style="font-size:12px;color:#9ca3af">PrioraOS · contact@prioraos.com</p>
+  </div>
+</div>`;
+
+      try {
+        await Promise.all([
+          acsRequest({ endpoint, accessKey, from, to: inbox, subject: `[PrioraOS] ${enquiryLabel} — ${name}`, html: teamHtml }),
+          acsRequest({ endpoint, accessKey, from, to: email, subject: 'Enquiry received — PrioraOS', html: confirmHtml }),
+        ]);
+        context.log(`Contact form emails sent: ${email}`);
+      } catch (err) {
+        context.log.error('ACS error:', err && err.message ? err.message : String(err));
+        // Non-fatal — still return success
+      }
+    }
+  } else {
+    context.log.warn('AZURE_COMMUNICATION_CONNECTION_STRING not configured');
+  }
+
+  context.res = {
+    status: 200,
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ success: true }),
+  };
+};
+
 
 /* ── ACS REST helper ─────────────────────────────────────────────────────── */
 function acsRequest({ endpoint, accessKey, from, to, subject, html }) {
