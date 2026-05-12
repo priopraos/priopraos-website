@@ -87,12 +87,11 @@ const Header = () => {
                 <Link
                   key={item.label}
                   to={item.to}
-                  className={`text-sm font-semibold py-2 px-5 rounded-lg transition-all duration-300 ${
+                  className={`text-sm font-semibold py-2 px-5 rounded-lg transition-all duration-300 border-2 ${
                     location.pathname === item.to
-                      ? 'text-yellow-500 bg-blue-50 shadow-md'
-                      : 'text-blue-900 hover:text-yellow-500 hover:bg-blue-50'
+                      ? 'text-yellow-600 border-yellow-400 bg-white'
+                      : 'text-blue-900 border-transparent hover:text-yellow-500 hover:bg-blue-50'
                   }`}
-                  style={{ backgroundColor: 'transparent' }}
                 >
                   {item.label}
                 </Link>

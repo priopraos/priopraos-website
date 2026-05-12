@@ -190,7 +190,7 @@ const TheEngine = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-12">
               {[
                 {
                   grade: 'A', label: 'Critical Need', range: '75 – 100',
@@ -286,7 +286,7 @@ const TheEngine = () => {
             <p className="text-lg text-gray-600 leading-relaxed mb-12 text-left md:text-justify">
               EquityMark™ points are a weighting mechanism that ensures the credential accurately reflects the distribution of clinical need in the clinician's work pattern. A clinician who consistently works in Grade A communities builds a different credential from one who works primarily in Grade D communities, even if both have completed the same number of shifts. The points translate clinical activity into an independently verifiable equity record.
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6">
               {[
                 { grade: 'A', pointsLabel: '3 points', desc: "Each Grade A engagement awards 3 points toward the clinician\u2019s EquityMark\u2122 total.", color: '#DA291C', iconBg: 'bg-red-100', textColor: 'text-red-700', badgeBg: 'bg-red-100', badgeText: 'text-red-700' },
                 { grade: 'B', pointsLabel: '2 points', desc: "Each Grade B engagement awards 2 points toward the clinician\u2019s EquityMark\u2122 total.", color: '#ED8B00', iconBg: 'bg-amber-100', textColor: 'text-amber-700', badgeBg: 'bg-amber-100', badgeText: 'text-amber-700' },
@@ -318,7 +318,7 @@ const TheEngine = () => {
             <p className="text-lg text-gray-600 leading-relaxed mb-12 text-left md:text-justify">
               The four levels reflect a sustained pattern of health equity contribution, not a single engagement. They are structured to make a clinician's equity contribution visible and professionally credible within appraisal, revalidation, and continuing professional development frameworks.
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6">
               {[
                 {
                   step: '01', level: 'Registered', threshold: '0 points',
