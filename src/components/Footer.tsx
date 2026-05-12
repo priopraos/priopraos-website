@@ -1,0 +1,100 @@
+import { Link } from 'react-router-dom';
+import { Mail, MapPin } from 'lucide-react';
+
+const Footer = () => {
+  return (
+    <footer className="bg-[#0A1628] text-gray-300">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* Brand column */}
+          <div>
+            <Link to="/" className="inline-flex items-center gap-3 mb-5">
+              <svg viewBox="0 0 400 400" className="h-10 w-10">
+                <circle cx="200" cy="200" r="190" fill="#4A90E2"/>
+                <path d="M120 160 L200 130 L280 160" stroke="#FFD700" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                <text x="200" y="200" fontFamily="Inter, system-ui, sans-serif" fontSize="48" fontWeight="300" fill="white" textAnchor="middle">Priora</text>
+                <text x="200" y="250" fontFamily="Inter, system-ui, sans-serif" fontSize="48" fontWeight="bold" fill="#FFD700" textAnchor="middle">OS</text>
+                <circle cx="175" cy="280" r="6" fill="white"/>
+                <circle cx="200" cy="280" r="6" fill="#FFD700"/>
+                <circle cx="225" cy="280" r="6" fill="#2ECC71"/>
+              </svg>
+              <span className="text-xl font-bold tracking-tight">
+                <span className="text-white">Priora</span><span className="text-yellow-400">OS</span>
+              </span>
+            </Link>
+            <p className="text-sm text-gray-400 leading-relaxed mb-5">
+              Directing clinical resource where it is needed most.
+            </p>
+            <div className="text-sm text-gray-400 space-y-2">
+              <a href="mailto:contact@prioraos.com" className="flex items-center gap-2 hover:text-white transition-colors">
+                <Mail className="h-4 w-4" /> contact@prioraos.com
+              </a>
+              <p className="flex items-center gap-2"><MapPin className="h-4 w-4" /> London, England</p>
+            </div>
+            <div className="flex items-center gap-3 mt-4">
+              <a href="https://linkedin.com/company/prioraos" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
+              <a href="https://x.com/prioraos" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" aria-label="X">
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          {/* Platform column */}
+          <div>
+            <h4 className="text-xs font-semibold tracking-widest text-gray-500 uppercase mb-4">Platform</h4>
+            <ul className="space-y-3 text-sm">
+              <li><Link to="/engine" className="hover:text-yellow-400 transition-colors">The Engine</Link></li>
+              <li><Link to="/locum-station" className="hover:text-yellow-400 transition-colors">Locum Station</Link></li>
+              <li><Link to="/global" className="hover:text-yellow-400 transition-colors">Global</Link></li>
+            </ul>
+          </div>
+
+          {/* Locum Station column */}
+          <div>
+            <h4 className="text-xs font-semibold tracking-widest text-gray-500 uppercase mb-4">Locum Station</h4>
+            <ul className="space-y-3 text-sm">
+              <li><Link to="/locum-station" className="hover:text-yellow-400 transition-colors">Visit Locum Station</Link></li>
+              <li><a href="https://locumstation.co.uk" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition-colors">Register as a Provider</a></li>
+              <li><a href="https://locumstation.co.uk" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition-colors">Join as a Clinician</a></li>
+              <li><a href="https://locumstation.co.uk/innovations" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition-colors">Our Innovations</a></li>
+            </ul>
+          </div>
+
+          {/* Company column */}
+          <div>
+            <h4 className="text-xs font-semibold tracking-widest text-gray-500 uppercase mb-4">Company</h4>
+            <ul className="space-y-3 text-sm">
+              <li><Link to="/about" className="hover:text-yellow-400 transition-colors">About</Link></li>
+              <li><a href="mailto:contact@prioraos.com" className="hover:text-yellow-400 transition-colors">Contact</a></li>
+              <li><Link to="/privacy" className="hover:text-yellow-400 transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/terms" className="hover:text-yellow-400 transition-colors">Terms of Service</Link></li>
+              <li><a href="https://locumstation.co.uk" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition-colors">locumstation.co.uk</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom bar */}
+      <div className="border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-3 text-center lg:text-left">
+              <p className="text-xs text-gray-500">© 2026 PrioraOS Ltd. All rights reserved. Registered in England and Wales.</p>
+              <span className="hidden sm:inline text-gray-700">·</span>
+              <p className="text-xs text-gray-600">Trading as Locum Station · locumstation.co.uk</p>
+            </div>
+            <p className="text-xs text-gray-600">All data sources published under Open Government Licence v3.0.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

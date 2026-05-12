@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <circle cx="200" cy="200" r="190" fill="#4A90E2"/>
+  <path d="M120 160 L200 130 L280 160" stroke="#FFD700" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="200" y="200" font-family="Arial, sans-serif" font-size="48" font-weight="300" fill="white" text-anchor="middle">Priora</text>
+  <text x="200" y="250" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#FFD700" text-anchor="middle">OS</text>
+  <circle cx="175" cy="280" r="6" fill="white"/>
+  <circle cx="200" cy="280" r="6" fill="#FFD700"/>
+  <circle cx="225" cy="280" r="6" fill="#2ECC71"/>
+</svg>
