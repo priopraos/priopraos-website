@@ -89,8 +89,8 @@ const Header = () => {
                   to={item.to}
                   className={`text-sm font-semibold py-2 px-5 rounded-lg transition-all duration-300 ${
                     location.pathname === item.to
-                      ? 'text-yellow-400 bg-blue-50 shadow-md'
-                      : 'text-blue-900 hover:text-yellow-400 hover:bg-blue-50'
+                      ? 'text-yellow-500 bg-blue-50 shadow-md'
+                      : 'text-blue-900 hover:text-yellow-500 hover:bg-blue-50'
                   }`}
                   style={{ backgroundColor: 'transparent' }}
                 >
@@ -119,8 +119,8 @@ const Header = () => {
                     onClick={() => setIsMenuOpen(false)}
                     className={`block font-semibold py-3 px-4 rounded-lg transition-all duration-300 ${
                       location.pathname === item.to
-                        ? 'text-yellow-400 bg-blue-50 shadow-md'
-                        : 'text-blue-900 hover:text-yellow-400'
+                        ? 'text-yellow-500 bg-blue-50 shadow-md'
+                        : 'text-blue-900 hover:text-yellow-500 hover:bg-blue-50'
                     }`}
                   >
                     {item.label}
