@@ -82,12 +82,12 @@ const Header = () => {
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-1">
+            <nav className="hidden lg:flex items-center space-x-2">
               {navItems.map((item) => (
                 <Link
                   key={item.label}
                   to={item.to}
-                  className={`text-sm font-semibold py-2 px-4 rounded-lg transition-all duration-300 ${
+                  className={`text-sm font-semibold py-2 px-5 rounded-lg transition-all duration-300 ${
                     location.pathname === item.to
                       ? 'text-yellow-400 bg-blue-50 shadow-md'
                       : 'text-blue-900 hover:text-yellow-400 hover:bg-blue-50'
