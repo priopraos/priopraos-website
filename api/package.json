@@ -1,5 +1,9 @@
 {
   "name": "prioraos-api",
   "version": "1.0.0",
-  "dependencies": {}
+  "main": "index.js",
+  "dependencies": {
+    "@azure/functions": "^4.5.0"
+  }
 }
+
