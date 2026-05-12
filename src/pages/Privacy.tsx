@@ -20,7 +20,7 @@ const Privacy = () => {
         </div>
       </section>
 
-      <section className="relative py-20 lg:py-28 bg-white">
+      <section className="relative py-20 lg:py-28 bg-gradient-to-b from-white via-gray-50/60 to-white overflow-hidden">
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-gray-600 leading-relaxed space-y-12 text-base">
               <div className="rounded-xl border border-gray-200 bg-gray-50/80 p-6 sm:p-8 space-y-3 text-sm">

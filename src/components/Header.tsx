@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <>
       {/* Top Utility Bar */}
-      <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white text-sm relative overflow-hidden z-[60]">
+      <div className="bg-gradient-to-r from-[#003087] via-[#005EB8] to-[#0072CE] text-white text-sm relative overflow-hidden z-[60]">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="flex justify-between items-center h-10">
@@ -89,8 +89,8 @@ const Header = () => {
                   to={item.to}
                   className={`text-sm font-semibold py-2 px-4 rounded-lg transition-all duration-300 ${
                     location.pathname === item.to
-                      ? 'text-yellow-500 bg-blue-50 shadow-md'
-                      : 'text-blue-900 hover:text-yellow-500'
+                      ? 'text-yellow-400 bg-blue-50 shadow-md'
+                      : 'text-blue-900 hover:text-yellow-400'
                   }`}
                 >
                   {item.label}
@@ -118,8 +118,8 @@ const Header = () => {
                     onClick={() => setIsMenuOpen(false)}
                     className={`block font-semibold py-3 px-4 rounded-lg transition-all duration-300 ${
                       location.pathname === item.to
-                        ? 'text-yellow-500 bg-blue-50 shadow-md'
-                        : 'text-blue-900 hover:text-yellow-500'
+                        ? 'text-yellow-400 bg-blue-50 shadow-md'
+                        : 'text-blue-900 hover:text-yellow-400'
                     }`}
                   >
                     {item.label}
@@ -129,8 +129,7 @@ const Header = () => {
                   <Link
                     to="/contact?type=institutional"
                     onClick={() => setIsMenuOpen(false)}
-                    className="flex items-center justify-center gap-2 w-full text-blue-900 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                    style={{ backgroundColor: '#FFD700' }}
+                    className="flex items-center justify-center gap-2 w-full bg-yellow-400 hover:bg-yellow-300 text-blue-900 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
                   >
                     Schedule a Technical Briefing
                     <ArrowRight className="h-4 w-4" />

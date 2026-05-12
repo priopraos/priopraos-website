@@ -28,6 +28,10 @@ const About = () => {
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
+            <span className="inline-flex items-center gap-2 bg-blue-50 text-[#005EB8] text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-full mb-6 border border-blue-100">
+              <span className="w-2 h-2 bg-[#005EB8] rounded-full" />
+              About PrioraOS
+            </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">THE COMPANY</h2>
             <div className="text-lg text-gray-600 leading-relaxed space-y-6 mb-12">
               <p className="text-left md:text-justify">
@@ -48,6 +52,10 @@ const About = () => {
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
+            <span className="inline-flex items-center gap-2 bg-blue-50 text-[#005EB8] text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-full mb-6 border border-blue-100">
+              <span className="w-2 h-2 bg-[#005EB8] rounded-full" />
+              Our Purpose
+            </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">THE MISSION</h2>
             <div className="bg-gradient-to-r from-[#003087] via-[#005EB8] to-[#0072CE] rounded-2xl p-10 text-center">
               <p className="text-xl lg:text-2xl text-yellow-300 font-bold mb-6">
@@ -68,6 +76,10 @@ const About = () => {
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
+            <span className="inline-flex items-center gap-2 bg-blue-50 text-[#005EB8] text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-full mb-6 border border-blue-100">
+              <span className="w-2 h-2 bg-[#005EB8] rounded-full" />
+              Legal &amp; Policy Framework
+            </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">THE HUMAN RIGHTS FOUNDATION</h2>
             <div className="text-lg text-gray-600 leading-relaxed space-y-6">
               <p className="text-left md:text-justify">
@@ -88,6 +100,10 @@ const About = () => {
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
+            <span className="inline-flex items-center gap-2 bg-blue-50 text-[#005EB8] text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-full mb-6 border border-blue-100">
+              <span className="w-2 h-2 bg-[#005EB8] rounded-full" />
+              IP &amp; Trademarks
+            </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">INTELLECTUAL PROPERTY</h2>
             <p className="text-lg text-gray-600 leading-relaxed text-left md:text-justify">
               The three proprietary innovations of PrioraOS, the Equity Fulfilment Engine™, EquityMark™, and the Equity Compliance Engine™, are protected as trade secrets of PrioraOS Ltd under an executed IP Assignment Agreement. PrioraOS and Locum Station are the subject of trademark applications at the UK Intellectual Property Office in classes 42 and 35.
