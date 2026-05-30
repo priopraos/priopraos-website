@@ -1,14 +1,14 @@
-import { Wrench } from 'lucide-react';
-
 export default function Maintenance() {
   return (
     <div className="min-h-screen bg-[#003087] flex flex-col items-center justify-center px-6 text-center">
       {/* Logo mark */}
       <div className="mb-8">
-        <div className="w-16 h-16 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center mx-auto mb-4">
-          <Wrench className="w-7 h-7 text-white" />
+        <div className="inline-flex items-center gap-2 sm:gap-3 mb-4">
+          <img src="/prioraos_logo.png" alt="PrioraOS Logo" className="h-12 sm:h-16 w-auto" />
+          <div className="text-xl sm:text-2xl font-bold tracking-tight">
+            <span className="text-white">Priora</span><span className="text-yellow-400">OS</span>
+          </div>
         </div>
-        <div className="text-white text-2xl font-bold tracking-tight">PrioraOS</div>
       </div>
 
       {/* Message */}

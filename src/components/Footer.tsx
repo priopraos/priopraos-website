@@ -9,16 +9,12 @@ const Footer = () => {
           {/* Brand column */}
           <div>
             <Link to="/" className="inline-flex items-center gap-3 mb-5">
-              <svg viewBox="0 0 400 400" className="h-10 w-10">
-                <circle cx="200" cy="200" r="190" fill="#4A90E2"/>
-                <path d="M120 160 L200 130 L280 160" stroke="#FFD700" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                <text x="200" y="200" fontFamily="Inter, system-ui, sans-serif" fontSize="48" fontWeight="300" fill="white" textAnchor="middle">Priora</text>
-                <text x="200" y="250" fontFamily="Inter, system-ui, sans-serif" fontSize="48" fontWeight="bold" fill="#FFD700" textAnchor="middle">OS</text>
-                <circle cx="175" cy="280" r="6" fill="white"/>
-                <circle cx="200" cy="280" r="6" fill="#FFD700"/>
-                <circle cx="225" cy="280" r="6" fill="#2ECC71"/>
-              </svg>
-              <span className="text-xl font-bold tracking-tight">
+              <img
+                src="/prioraos_logo.png"
+                alt="PrioraOS Logo"
+                className="h-16 w-auto"
+              />
+              <span className="text-2xl font-bold tracking-tight">
                 <span className="text-white">Priora</span><span className="text-yellow-400">OS</span>
               </span>
             </Link>
