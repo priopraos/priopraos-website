@@ -79,13 +79,16 @@ const Footer = () => {
       {/* Bottom bar */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
-            <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-3 text-center lg:text-left">
-              <p className="text-xs text-gray-500">© 2026 PrioraOS Ltd. All rights reserved. Registered in England and Wales. Company No. 14688210. ICO: ZC159864.</p>
-              <span className="hidden sm:inline text-gray-700">·</span>
-              <p className="text-xs text-gray-600">Trading as Locum Station · locumstation.co.uk</p>
-            </div>
-            <p className="text-xs text-gray-600">All data sources published under Open Government Licence v3.0.</p>
+          <div className="text-center space-y-1">
+            <p className="text-xs text-gray-500 leading-relaxed">
+              © 2026 PrioraOS Ltd · Registered in England and Wales · Company No. 14688210 · ICO Registered: ZC159864
+            </p>
+            <p className="text-xs text-gray-600 leading-relaxed break-words">
+              Trading as Locum Station · locumstation.co.uk · support@locumstation.co.uk
+            </p>
+            <p className="text-xs text-gray-600 leading-relaxed">
+              All data published under Open Government Licence v3.0
+            </p>
           </div>
         </div>
       </div>
