@@ -84,7 +84,16 @@ const Footer = () => {
               © 2026 PrioraOS Ltd · Registered in England and Wales · Company No. 14688210 · ICO Registered: ZC159864
             </p>
             <p className="text-xs text-gray-600 leading-relaxed break-words">
-              Trading as Locum Station · locumstation.co.uk · support@locumstation.co.uk
+              Trading as Locum Station ·{' '}
+              <a
+                href="https://locumstation.co.uk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-yellow-400 transition-colors"
+              >
+                locumstation.co.uk
+              </a>{' '}
+              · support@locumstation.co.uk
             </p>
             <p className="text-xs text-gray-600 leading-relaxed">
               All data published under Open Government Licence v3.0
