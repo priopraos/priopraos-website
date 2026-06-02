@@ -30,7 +30,7 @@ const Privacy = () => {
                 <MetaRow label="Applies to:" value="prioraos.com and all subdomains" />
                 <MetaRow label="Company:" value="PrioraOS Ltd" />
                 <MetaRow label="Company No.:" value="14688210" />
-                <MetaRow label="ICO Registration:" value="—" />
+                <MetaRow label="ICO Registration:" value="ZC159864" />
                 <MetaRow label="Registered Office:" value="London, England" />
               </div>
 
@@ -51,7 +51,7 @@ const Privacy = () => {
                   <a href="mailto:contact@prioraos.com" className="text-[#005EB8] hover:underline">contact@prioraos.com</a>
                 </p>
                 <p className="text-left md:text-justify mt-2">
-                  <strong className="text-gray-900">ICO Registration No.:</strong> —
+                  <strong className="text-gray-900">ICO Registration No.:</strong> ZC159864
                 </p>
               </Section>
 

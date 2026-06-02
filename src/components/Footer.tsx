@@ -81,7 +81,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
             <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-3 text-center lg:text-left">
-              <p className="text-xs text-gray-500">© 2026 PrioraOS Ltd. All rights reserved. Registered in England and Wales.</p>
+              <p className="text-xs text-gray-500">© 2026 PrioraOS Ltd. All rights reserved. Registered in England and Wales. ICO: ZC159864.</p>
               <span className="hidden sm:inline text-gray-700">·</span>
               <p className="text-xs text-gray-600">Trading as Locum Station · locumstation.co.uk</p>
             </div>
