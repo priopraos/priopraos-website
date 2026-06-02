@@ -12,6 +12,7 @@ import Maintenance from './pages/Maintenance';
 
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
+import CookieBanner from './components/CookieBanner';
 
 const STATUS_URL = 'https://api.locumstation.co.uk/api/prioraos-status';
 const POLL_INTERVAL_MS = 60_000; // re-check every 60 s
@@ -66,6 +67,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <Footer />
+        <CookieBanner />
       </div>
     </BrowserRouter>
   );
