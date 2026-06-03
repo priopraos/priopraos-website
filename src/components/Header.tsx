@@ -109,10 +109,10 @@ const Header = () => {
                     key={item.label}
                     to={item.to}
                     onClick={() => setIsMenuOpen(false)}
-                    className={`block font-semibold py-3 px-4 rounded-lg transition-all duration-300 ${
+                    className={`block font-semibold py-3 px-4 rounded-xl border transition-all duration-300 ${
                       location.pathname === item.to
-                        ? 'text-yellow-500 bg-blue-50 shadow-md'
-                        : 'text-blue-900 hover:text-yellow-500 hover:bg-blue-50'
+                        ? 'text-blue-900 border-yellow-400 bg-white'
+                        : 'text-blue-900 border-transparent hover:border-yellow-400'
                     }`}
                   >
                     {item.label}
@@ -124,7 +124,7 @@ const Header = () => {
                     onClick={() => setIsMenuOpen(false)}
                     className="flex items-center justify-center gap-2 w-full bg-yellow-400 hover:bg-yellow-300 text-blue-900 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
                   >
-                    Schedule a Technical Briefing
+                    Schedule Briefing
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </div>
