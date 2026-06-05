@@ -82,8 +82,8 @@ const Header = () => {
                   to={item.to}
                   className={`text-sm font-semibold py-2 px-5 rounded-lg transition-all duration-300 border-2 ${
                     location.pathname === item.to
-                      ? 'text-yellow-600 border-yellow-400 bg-white'
-                      : 'text-blue-900 border-transparent hover:text-yellow-500 hover:bg-blue-50'
+                      ? 'text-blue-900 border-yellow-400 bg-white'
+                      : 'text-blue-900 border-transparent hover:text-yellow-600 hover:bg-white hover:border-yellow-400'
                   }`}
                 >
                   {item.label}
@@ -94,7 +94,7 @@ const Header = () => {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-3 text-blue-600 hover:text-yellow-600 hover:bg-blue-50 rounded-lg transition-all duration-300"
+              className="lg:hidden p-3 text-blue-600 hover:text-yellow-600 rounded-lg transition-all duration-300"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -111,7 +111,7 @@ const Header = () => {
                     onClick={() => setIsMenuOpen(false)}
                     className={`block font-semibold py-3 px-4 rounded-xl border transition-all duration-300 ${
                       location.pathname === item.to
-                        ? 'text-blue-900 border-yellow-400 bg-white'
+                        ? 'text-blue-900 border-yellow-400'
                         : 'text-blue-900 border-transparent hover:border-yellow-400'
                     }`}
                   >

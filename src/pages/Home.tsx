@@ -225,13 +225,13 @@ const Home = () => {
                     </a>
                   </div>
                   <button
-                    onClick={() => { setLightboxImage('/12.png'); setLightboxAlt('Equity Fulfilment Engine — shift scoring interface'); }}
+                    onClick={() => { setLightboxImage('/EFE SHIFT.png'); setLightboxAlt('Equity Fulfilment Engine — shift scoring interface'); }}
                     className="relative group/image order-last md:order-last w-full"
                   >
                     <img
-                      src="/12.png"
+                      src="/EFE SHIFT.png"
                       alt="Equity Fulfilment Engine — shift scoring interface"
-                      className="w-full h-auto cursor-zoom-in transition-transform duration-300 group-hover/image:scale-[1.02]"
+                      className="w-full h-auto rounded-md cursor-zoom-in transition-transform duration-300 group-hover/image:scale-[1.02]"
                     />
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/image:opacity-100 transition-opacity duration-300">
                       <div className="bg-black/40 rounded-full p-3 backdrop-blur-sm">
@@ -239,7 +239,7 @@ const Home = () => {
                       </div>
                     </div>
                     <p className="text-xs text-gray-500 mt-3 text-center">
-                      EFE™ Priority Feed — live equity scoring on a GP practice shift in Balsall Heath, Birmingham (Grade A: Critical Need)
+                      EFE™ Priority Feed — live equity scoring on a GP practice shift in Blackpool (Grade A: Critical Need)
                     </p>
                   </button>
                 </div>
@@ -253,11 +253,11 @@ const Home = () => {
                 <div className="grid md:grid-cols-2 gap-6 items-center">
                   <div className="order-last md:order-first">
                     <button
-                      onClick={() => { setLightboxImage('/2.jpeg'); setLightboxAlt('EquityMark — clinician equity credential'); }}
+                      onClick={() => { setLightboxImage('/Screenshot_5-6-2026_33435_.jpeg'); setLightboxAlt('EquityMark — clinician equity credential'); }}
                       className="relative group/image w-full"
                     >
                       <img
-                        src="/2.jpeg"
+                        src="/Screenshot_5-6-2026_33435_.jpeg"
                         alt="EquityMark — clinician equity credential"
                         className="rounded-xl w-full h-auto border border-gray-100 cursor-zoom-in transition-transform duration-300 group-hover/image:scale-[1.02]"
                       />
@@ -319,11 +319,11 @@ const Home = () => {
                   </div>
                   <div className="order-last md:order-last">
                     <button
-                      onClick={() => { setLightboxImage('/3.jpeg'); setLightboxAlt('Equity Compliance Engine — ECE compliance report'); }}
+                      onClick={() => { setLightboxImage('/Screenshot_5-6-2026_32943_.jpeg'); setLightboxAlt('Equity Compliance Engine — ECE compliance report'); }}
                       className="relative group/image w-full"
                     >
                       <img
-                        src="/3.jpeg"
+                        src="/Screenshot_5-6-2026_32943_.jpeg"
                         alt="Equity Compliance Engine — ECE compliance report"
                         className="rounded-xl w-full h-auto border border-gray-100 cursor-zoom-in transition-transform duration-300 group-hover/image:scale-[1.02]"
                       />
@@ -390,12 +390,12 @@ const Home = () => {
                   <div className="order-last md:order-last w-full">
                     <button
                       type="button"
-                      onClick={() => { setLightboxImage('/1.jpeg'); setLightboxAlt('Provider shift posting interface — EFE™ equity grade assigned automatically on postcode entry'); }}
+                      onClick={() => { setLightboxImage('/Screenshot%202026-06-05%20at%2004-33-32%20Locum%20Station%20Landing%20Page%20Design.png'); setLightboxAlt('Landing page design screenshot'); }}
                       className="relative group/image w-full"
                     >
                       <img
-                        src="/1.jpeg"
-                        alt="Provider shift posting interface — EFE™ equity grade assigned automatically on postcode entry"
+                        src="/Screenshot%202026-06-05%20at%2004-33-32%20Locum%20Station%20Landing%20Page%20Design.png"
+                        alt="Landing page design screenshot"
                         className="rounded-xl w-full h-auto border border-gray-100 cursor-zoom-in transition-transform duration-300 group-hover/image:scale-[1.02]"
                       />
                       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/image:opacity-100 transition-opacity duration-300">
