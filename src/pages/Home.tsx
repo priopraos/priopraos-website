@@ -420,12 +420,12 @@ const Home = () => {
                   <div className="order-last md:order-first w-full">
                     <button
                       type="button"
-                      onClick={() => { setLightboxImage('/10.png'); setLightboxAlt('Clinician shift detail view — community need profile, four dimension scores, and Core20PLUS5 flag status displayed before application'); }}
+                      onClick={() => { setLightboxImage('/shift%20detailes%20page.png'); setLightboxAlt('Shift details page screenshot'); }}
                       className="relative group/image w-full"
                     >
                       <img
-                        src="/10.png"
-                        alt="Clinician shift detail view — community need profile, four dimension scores, and Core20PLUS5 flag status displayed before application"
+                        src="/shift%20detailes%20page.png"
+                        alt="Shift details page screenshot"
                         className="rounded-xl w-full h-auto border border-gray-100 cursor-zoom-in transition-transform duration-300 group-hover/image:scale-[1.02]"
                       />
                       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/image:opacity-100 transition-opacity duration-300">
