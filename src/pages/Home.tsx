@@ -226,12 +226,12 @@ const Home = () => {
                   </div>
                   <button
                     onClick={() => { setLightboxImage('/EFE SHIFT.png'); setLightboxAlt('Equity Fulfilment Engine — shift scoring interface'); }}
-                    className="relative group/image order-last md:order-last w-full"
+                    className="relative group/image order-last md:order-last w-full rounded-md overflow-hidden bg-[#005EB8]"
                   >
                     <img
                       src="/EFE SHIFT.png"
                       alt="Equity Fulfilment Engine — shift scoring interface"
-                      className="w-full h-auto rounded-md cursor-zoom-in transition-transform duration-300 group-hover/image:scale-[1.02]"
+                      className="block w-full h-auto scale-[1.03] cursor-zoom-in transition-transform duration-300 group-hover/image:scale-[1.05]"
                     />
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/image:opacity-100 transition-opacity duration-300">
                       <div className="bg-black/40 rounded-full p-3 backdrop-blur-sm">
