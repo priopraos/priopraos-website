@@ -170,16 +170,16 @@ const LocumStation = () => {
                     <button
                       type="button"
                       onClick={() => {
-                        setLightboxImage('/25.png');
+                        setLightboxImage('/Locum%20Station%20sd.png');
                         setLightboxAlt(SHIFT_DETAIL_CAPTION);
                       }}
                       className="relative group/image w-full block focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2 rounded-lg"
                       aria-label="Enlarge clinician shift detail screenshot"
                     >
                       <img
-                        src="/25.png"
+                        src="/Locum%20Station%20sd.png"
                         alt={SHIFT_DETAIL_CAPTION}
-                        className="w-full h-auto max-h-[450px] object-contain object-center rounded-lg cursor-zoom-in transition-transform duration-300 group-hover/image:scale-[1.02]"
+                        className="w-full h-auto max-h-[450px] object-contain object-center rounded-md cursor-zoom-in transition-transform duration-300 group-hover/image:scale-[1.02]"
                       />
                       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 rounded-lg pointer-events-none">
                         <div className="bg-black/40 rounded-full p-3 backdrop-blur-sm">
