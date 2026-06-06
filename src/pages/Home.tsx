@@ -204,7 +204,7 @@ const Home = () => {
 
             {/* EFE — text left, image right */}
             <ScrollReveal delay={100}>
-              <div className="group relative bg-white rounded-2xl border border-gray-100 p-6 lg:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
+                  <div className="group relative bg-white rounded-2xl p-6 lg:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
                 <div className="absolute top-0 inset-x-0 h-1 rounded-t-2xl bg-gradient-to-r from-[#005EB8] to-[#41B6E6] transition-all duration-500 group-hover:h-1.5" />
                 <div className="grid md:grid-cols-2 gap-6 items-center">
                   <div>
