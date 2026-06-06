@@ -204,7 +204,7 @@ const Home = () => {
 
             {/* EFE — text left, image right */}
             <ScrollReveal delay={100}>
-                  <div className="group relative bg-white rounded-2xl p-6 lg:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
+              <div className="group relative bg-white rounded-2xl border border-gray-100 p-6 lg:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
                 <div className="absolute top-0 inset-x-0 h-1 rounded-t-2xl bg-gradient-to-r from-[#005EB8] to-[#41B6E6] transition-all duration-500 group-hover:h-1.5" />
                 <div className="grid md:grid-cols-2 gap-6 items-center">
                   <div>
@@ -226,12 +226,12 @@ const Home = () => {
                   </div>
                   <button
                     onClick={() => { setLightboxImage('/EFE SHIFT.png'); setLightboxAlt('Equity Fulfilment Engine — shift scoring interface'); }}
-                    className="relative group/image order-last md:order-last w-full"
+                    className="relative group/image order-last md:order-last w-full rounded-md overflow-hidden bg-[#005EB8]"
                   >
                     <img
                       src="/EFE SHIFT.png"
                       alt="Equity Fulfilment Engine — shift scoring interface"
-                      className="w-full h-auto rounded-md cursor-zoom-in transition-transform duration-300 group-hover/image:scale-[1.02]"
+                      className="block w-full h-auto rounded-md cursor-zoom-in transition-transform duration-300 group-hover/image:scale-[1.02]"
                     />
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/image:opacity-100 transition-opacity duration-300">
                       <div className="bg-black/40 rounded-full p-3 backdrop-blur-sm">
