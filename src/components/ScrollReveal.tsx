@@ -5,6 +5,11 @@ const ScrollReveal = ({ children, delay = 0, className = '' }: { children: React
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (typeof window === 'undefined' || typeof window.IntersectionObserver === 'undefined') {
+      setVisible(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -14,6 +19,7 @@ const ScrollReveal = ({ children, delay = 0, className = '' }: { children: React
       },
       { threshold: 0.15 }
     );
+
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
   }, [delay]);

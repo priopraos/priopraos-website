@@ -34,10 +34,14 @@ function App() {
     let cancelled = false;
 
     const check = () => {
-      fetch(STATUS_URL, { cache: 'no-store' })
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 8000);
+
+      fetch(STATUS_URL, { cache: 'no-store', signal: controller.signal })
         .then(r => r.json())
         .then(d => { if (!cancelled) setMaintenance(!!d.maintenance_mode); })
-        .catch(() => { if (!cancelled) setMaintenance(false); });
+        .catch(() => { if (!cancelled) setMaintenance(false); })
+        .finally(() => clearTimeout(timeoutId));
     };
 
     check();
