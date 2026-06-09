@@ -36,6 +36,10 @@ const Terms = () => {
               </div>
 
               <p className="text-left md:text-justify">
+                PrioraOS Ltd provides infrastructure and technology services. The consumer-facing Locum Station platform at locumstation.co.uk has its own Terms of Service, Privacy Policy, and legal framework which govern use of that platform. The terms on this page govern use of the prioraos.com website only.
+              </p>
+
+              <p className="text-left md:text-justify">
                 Please read these Terms of Service carefully before using prioraos.com. By accessing or using this website, you agree to be bound by these terms. If you do not agree, please do not use this website.
               </p>
 
