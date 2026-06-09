@@ -458,7 +458,7 @@ const TheEngine = () => {
           {/* Report formats */}
           <ScrollReveal delay={200}>
             <h3 className="text-xl font-bold text-gray-900 mb-6">REPORT FORMATS.</h3>
-            <div className="grid md:grid-cols-2 gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               {[
                 {
                   title: 'Full Activity Report',
@@ -472,12 +472,8 @@ const TheEngine = () => {
                   title: 'Social Value Procurement Report',
                   body: 'Formatted output aligned with national procurement Social Value submission requirements. Full data provenance from independently published government sources. Designed for procurement bodies requiring equity-directed workforce evidence with traceable independent sourcing.',
                 },
-                {
-                  title: 'Monthly PDF Summary',
-                  body: 'Automatically generated digest available at all subscription levels.',
-                },
               ].map((r, i) => (
-                <div key={i} className="group relative bg-white rounded-2xl border border-gray-100 p-6 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                <div key={i} className="group relative h-full bg-white rounded-2xl border border-gray-100 p-6 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
                   <div className="absolute top-0 inset-x-0 h-1 rounded-t-2xl bg-gradient-to-r from-[#ED8B00] to-[#D4820A]" />
                   <h4 className="text-base font-bold text-gray-900 mb-2 mt-1">{r.title}</h4>
                   <p className="text-gray-500 text-sm leading-relaxed">{r.body}</p>
