@@ -251,11 +251,15 @@ const Global = () => {
         </div>
       </section>
 
-      {/* ═══════════ ENQUIRIES ═══════════ */}
-      <section className="relative py-20 lg:py-28 bg-white overflow-hidden">
+            {/* ═══════════ ENQUIRIES ═══════════ */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#003087] via-[#005EB8] to-[#0072CE] py-20 lg:py-28 text-white">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-white/5 blur-3xl" />
+          <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-yellow-400/10 blur-3xl" />
+        </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <p className="text-gray-600 leading-relaxed mb-10 text-center">
+            <p className="text-blue-100 leading-relaxed mb-10 text-center text-lg">
               We welcome enquiries from government agencies, health system administrators, and research institutions in all target jurisdictions.
             </p>
           </ScrollReveal>
@@ -263,7 +267,7 @@ const Global = () => {
             <div className="text-center">
               <Link
                 to="/contact?type=international"
-                className="inline-flex items-center justify-center gap-2 bg-[#005EB8] hover:bg-[#003087] text-white font-bold px-8 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-[#003087] font-bold px-8 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
               >
                 Discuss International Partnership
                 <ArrowRight className="w-5 h-5" />

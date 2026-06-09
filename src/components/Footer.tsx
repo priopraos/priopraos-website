@@ -82,13 +82,13 @@ const Footer = () => {
             <p className="text-xs text-gray-500 leading-relaxed">
               © 2026 PrioraOS Ltd · Registered in England and Wales · Company No. 14688210 · ICO Registered: ZC159864
             </p>
-            <p className="text-xs text-gray-600 leading-relaxed break-words">
+                        <p className="text-xs text-yellow-400 leading-relaxed break-words">
               Trading as Locum Station ·{' '}
               <a
                 href="https://locumstation.co.uk"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-yellow-400 transition-colors"
+                className="text-yellow-400 hover:text-yellow-300 transition-colors"
               >
                 locumstation.co.uk
               </a>{' '}
