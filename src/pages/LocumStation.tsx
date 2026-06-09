@@ -8,11 +8,12 @@ import ScrollReveal from '../components/ScrollReveal';
 const JOB_BOARD_CAPTION =
   'Locum Station public job board — shifts sorted by EFE™ equity grade. Grade A (Critical Need) postings surface first. Accessible to all visitors without registration.';
 const SHIFT_DETAIL_CAPTION =
-  'Clinician shift detail view — community need profile, four dimension scores with named government data sources, Core20PLUS5 flag status, and EquityMark™ points preview displayed before the clinician applies.';
+  'Locum Station clinician shift detail view — community need profile, four dimension scores with named government data sources, Core20PLUS5 flag status, and EquityMark™ points preview displayed before the clinician applies.';
 
 const LocumStation = () => {
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
   const [lightboxAlt, setLightboxAlt] = useState('');
+  const [activeView, setActiveView] = useState<'jobBoard' | 'shiftDetail'>('jobBoard');
 
   return (
     <div className="bg-white">
@@ -109,67 +110,102 @@ const LocumStation = () => {
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={150}>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="group relative bg-white rounded-2xl border border-gray-100 p-6 shadow-sm">
-                <div className="absolute top-0 inset-x-0 h-1 rounded-t-2xl bg-gradient-to-r from-[#005EB8] to-[#41B6E6]" />
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-blue-50">
-                    <Activity className="w-6 h-6 text-[#005EB8]" />
+                    <ScrollReveal delay={150}>
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
+              {/* LEFT: Text content — both steps stacked */}
+              <div className="space-y-8">
+                {/* Step 01 */}
+                <div className="group relative bg-white rounded-2xl border border-gray-100 p-6 shadow-sm">
+                  <div className="absolute top-0 inset-x-0 h-1 rounded-t-2xl bg-gradient-to-r from-[#005EB8] to-[#41B6E6]" />
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-blue-50">
+                      <Activity className="w-6 h-6 text-[#005EB8]" />
+                    </div>
+                    <div>
+                      <span className="text-xs font-bold tracking-wider text-gray-400 uppercase">Step 01</span>
+                      <h3 className="text-xl font-bold text-gray-900">The public job board</h3>
+                    </div>
                   </div>
-                  <div>
-                    <span className="text-xs font-bold tracking-wider text-gray-400 uppercase">Step 01</span>
-                    <h3 className="text-xl font-bold text-gray-900">The public job board</h3>
-                  </div>
+                  <p className="text-lg text-gray-600 leading-relaxed text-left md:text-justify">
+                    Every shift posted on Locum Station appears on a publicly accessible job board at locumstation.co.uk/shifts. Shifts are sorted by EFE™ equity grade: Grade A (Critical Need) postings surface first. This sort order is not configurable. It cannot be overridden by pay rate, urgency, or posting recency.
+                  </p>
                 </div>
-                <p className="text-lg text-gray-600 leading-relaxed mb-6 text-left md:text-justify">
-                  Every shift posted on Locum Station appears on a publicly accessible job board at locumstation.co.uk/shifts. Shifts are sorted by EFE™ equity grade: Grade A (Critical Need) postings surface first. This sort order is not configurable. It cannot be overridden by pay rate, urgency, or posting recency.
-                </p>
-                <div className="rounded-xl border border-gray-100 bg-gray-50 p-2 md:p-3">
+
+                {/* Step 02 */}
+                <div className="group relative bg-white rounded-2xl border border-gray-100 p-6 shadow-sm">
+                  <div className="absolute top-0 inset-x-0 h-1 rounded-t-2xl bg-gradient-to-r from-[#2ECC71] to-[#27AE60]" />
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-emerald-50">
+                      <Users className="w-6 h-6 text-emerald-600" />
+                    </div>
+                    <div>
+                      <span className="text-xs font-bold tracking-wider text-gray-400 uppercase">Step 02</span>
+                      <h3 className="text-xl font-bold text-gray-900">Clinician shift detail</h3>
+                    </div>
+                  </div>
+                  <p className="text-lg text-gray-600 leading-relaxed text-left md:text-justify">
+                    Registered clinicians see the full shift detail including the four-dimension community need assessment, the composite EFE™ score, any Core20PLUS5 Specialty Need Flag applied, and a preview of the EquityMark™ points the shift would award. They apply directly through the platform.
+                  </p>
+                </div>
+              </div>
+
+              {/* RIGHT: Image display with toggle switch */}
+              <div className="sticky top-8">
+                {/* Toggle switch */}
+                <div className="flex items-center justify-center gap-1 bg-gray-100 rounded-xl p-1 mb-4 w-full max-w-md mx-auto">
                   <button
                     type="button"
-                    onClick={() => {
-                      setLightboxImage('/24.png');
-                      setLightboxAlt(JOB_BOARD_CAPTION);
-                    }}
-                    className="relative group/image w-full block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#005EB8] focus-visible:ring-offset-2 rounded-lg"
-                    aria-label="Enlarge public job board screenshot"
+                    onClick={() => setActiveView('jobBoard')}
+                    className={`flex-1 px-4 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                      activeView === 'jobBoard'
+                        ? 'bg-white text-[#005EB8] shadow-sm'
+                        : 'text-gray-500 hover:text-gray-700'
+                    }`}
                   >
-                    <img
-                      src="/24.png"
-                      alt={JOB_BOARD_CAPTION}
-                      className="w-full h-auto max-h-[450px] object-contain object-center rounded-lg cursor-zoom-in transition-transform duration-300 group-hover/image:scale-[1.02]"
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 rounded-lg pointer-events-none">
-                      <div className="bg-black/40 rounded-full p-3 backdrop-blur-sm">
-                        <ZoomIn className="w-6 h-6 text-white" />
-                      </div>
-                    </div>
+                    <span className="hidden sm:inline">The public job board</span>
+                    <span className="sm:hidden">Job board</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setActiveView('shiftDetail')}
+                    className={`flex-1 px-4 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                      activeView === 'shiftDetail'
+                        ? 'bg-white text-emerald-600 shadow-sm'
+                        : 'text-gray-500 hover:text-gray-700'
+                    }`}
+                  >
+                    <span className="hidden sm:inline">Clinician shift detail</span>
+                    <span className="sm:hidden">Shift detail</span>
                   </button>
                 </div>
-                <p className="text-[11px] sm:text-xs text-gray-600 italic text-center mt-3 leading-relaxed px-1">
-                  {JOB_BOARD_CAPTION}
-                </p>
-              </div>
-              <div className="group relative bg-white rounded-2xl border border-gray-100 p-6 shadow-sm">
-                <div className="absolute top-0 inset-x-0 h-1 rounded-t-2xl bg-gradient-to-r from-[#2ECC71] to-[#27AE60]" />
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-emerald-50">
-                    <Users className="w-6 h-6 text-emerald-600" />
-                  </div>
-                  <div>
-                    <span className="text-xs font-bold tracking-wider text-gray-400 uppercase">Step 02</span>
-                    <h3 className="text-xl font-bold text-gray-900">Clinician shift detail</h3>
-                  </div>
-                </div>
-                <p className="text-lg text-gray-600 leading-relaxed mb-6 text-left md:text-justify">
-                  Registered clinicians see the full shift detail including the four-dimension community need assessment, the composite EFE™ score, any Core20PLUS5 Specialty Need Flag applied, and a preview of the EquityMark™ points the shift would award. They apply directly through the platform.
-                </p>
-                <div className="flex flex-col items-center w-full">
-                  <div className="rounded-xl border border-gray-100 bg-gray-50 p-2 md:p-3 w-full">
+
+                {/* Image display */}
+                <div className="rounded-xl border border-gray-100 bg-gray-50 p-2 md:p-3">
+                  {activeView === 'jobBoard' ? (
                     <button
                       type="button"
                       onClick={() => {
+                        setLightboxImage('/24.png');
+                        setLightboxAlt(JOB_BOARD_CAPTION);
+                      }}
+                      className="relative group/image w-full block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#005EB8] focus-visible:ring-offset-2 rounded-lg"
+                      aria-label="Enlarge public job board screenshot"
+                    >
+                      <img
+                        src="/24.png"
+                        alt={JOB_BOARD_CAPTION}
+                        className="w-full h-auto max-h-[500px] object-contain object-center bg-white rounded-lg cursor-zoom-in transition-transform duration-300 group-hover/image:scale-[1.02]"
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 rounded-lg pointer-events-none">
+                        <div className="bg-black/40 rounded-full p-3 backdrop-blur-sm">
+                          <ZoomIn className="w-6 h-6 text-white" />
+                        </div>
+                      </div>
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                                            onClick={() => {
                         setLightboxImage('/Locum%20Station%20sd.png');
                         setLightboxAlt(SHIFT_DETAIL_CAPTION);
                       }}
@@ -179,7 +215,7 @@ const LocumStation = () => {
                       <img
                         src="/Locum%20Station%20sd.png"
                         alt={SHIFT_DETAIL_CAPTION}
-                        className="w-full h-auto max-h-[450px] object-contain object-center rounded-md cursor-zoom-in transition-transform duration-300 group-hover/image:scale-[1.02]"
+                        className="w-full h-auto max-h-[500px] object-contain object-center bg-white rounded-lg cursor-zoom-in transition-transform duration-300 group-hover/image:scale-[1.02]"
                       />
                       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 rounded-lg pointer-events-none">
                         <div className="bg-black/40 rounded-full p-3 backdrop-blur-sm">
@@ -187,11 +223,13 @@ const LocumStation = () => {
                         </div>
                       </div>
                     </button>
-                  </div>
-                  <p className="text-[11px] sm:text-xs text-gray-600 italic text-center mt-3 leading-relaxed px-1">
-                    {SHIFT_DETAIL_CAPTION}
-                  </p>
+                  )}
                 </div>
+
+                {/* Caption */}
+                <p className="text-[11px] sm:text-xs text-gray-600 italic text-center mt-3 leading-relaxed px-1">
+                  {activeView === 'jobBoard' ? JOB_BOARD_CAPTION : SHIFT_DETAIL_CAPTION}
+                </p>
               </div>
             </div>
           </ScrollReveal>
