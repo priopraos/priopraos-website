@@ -1,6 +1,5 @@
 import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-import ScrollReveal from '../components/ScrollReveal';
 
 const LAST_UPDATED = 'May 2026';
 
@@ -23,8 +22,7 @@ const Terms = () => {
 
       <section className="relative py-20 lg:py-28 bg-gradient-to-b from-white via-gray-50/60 to-white overflow-hidden">
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <div className="text-gray-600 leading-relaxed space-y-12 text-base">
+          <div className="text-gray-600 leading-relaxed space-y-12 text-base">
               <div className="rounded-xl border border-gray-200 bg-gray-50/80 p-6 sm:p-8 space-y-3 text-sm">
                 <MetaRow label="Document:" value="Terms of Service — prioraos.com" />
                 <MetaRow label="Version:" value="1.0 — Pre-Launch" />
@@ -201,8 +199,7 @@ const Terms = () => {
                   PrioraOS Ltd • Registered in England and Wales • Company No. 14688210 • © 2026 PrioraOS Ltd
                 </p>
               </div>
-            </div>
-          </ScrollReveal>
+          </div>
         </div>
       </section>
     </div>
