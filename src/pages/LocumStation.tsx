@@ -234,10 +234,22 @@ const LocumStation = () => {
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={350}>
-            <p className="text-lg text-gray-600 leading-relaxed mt-12 text-left md:text-justify">
-              When a shift is fulfilled, the provider confirms which clinician worked it. The clinician confirms on their side. Both confirmations trigger the Equity Compliance Engine, which generates the compliance record for that engagement. The clinician's EquityMark™ credential is updated automatically.
-            </p>
+                    <ScrollReveal delay={350}>
+            <div className="group relative bg-white rounded-2xl border border-gray-100 p-6 shadow-sm mt-12">
+              <div className="absolute top-0 inset-x-0 h-1 rounded-t-2xl bg-gradient-to-r from-amber-500 to-yellow-400" />
+              <div className="flex items-center gap-4 mb-4">
+                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-amber-50">
+                  <FileText className="w-6 h-6 text-amber-600" />
+                </div>
+                <div>
+                  <span className="text-xs font-bold tracking-wider text-gray-400 uppercase">Step 03</span>
+                  <h3 className="text-xl font-bold text-gray-900">The Equity Compliance Engine™</h3>
+                </div>
+              </div>
+              <p className="text-lg text-gray-600 leading-relaxed text-left md:text-justify">
+                When a shift is fulfilled, the provider confirms which clinician worked it. The clinician confirms on their side. Both confirmations trigger the Equity Compliance Engine™, which generates the compliance record for that engagement. The clinician's EquityMark™ credential is updated automatically.
+              </p>
+            </div>
           </ScrollReveal>
 
           <ScrollReveal delay={450}>
