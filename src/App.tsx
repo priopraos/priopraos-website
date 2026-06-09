@@ -28,7 +28,7 @@ function ScrollToTop() {
 }
 
 function App() {
-  const [maintenance, setMaintenance] = useState<boolean | null>(null);
+  const [maintenance, setMaintenance] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -44,9 +44,6 @@ function App() {
     const interval = setInterval(check, POLL_INTERVAL_MS);
     return () => { cancelled = true; clearInterval(interval); };
   }, []);
-
-  // While we wait for the first check, render nothing (avoids flash)
-  if (maintenance === null) return null;
 
   if (maintenance) return <Maintenance />;
 
