@@ -246,19 +246,19 @@ const Contact = () => {
                   <h3 className="text-xl font-bold text-gray-900">For Locum Station Enquiries</h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed mb-6">
-                  For NHS providers and clinicians in the United Kingdom, visit the Locum Station support page or email our support team directly.
+                  For NHS providers and clinicians in the United Kingdom, use the Locum Station contact page or email our support team directly.
                 </p>
                 <div className="space-y-4">
                   <a
-                    href="https://locumstation.co.uk/support"
+                    href="https://locumstation.co.uk/contact"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 p-4 rounded-xl bg-emerald-50 border border-emerald-100 hover:bg-emerald-100 transition-colors group/link"
                   >
                     <ExternalLink className="w-5 h-5 text-emerald-600 flex-shrink-0" />
                     <div>
-                      <p className="font-semibold text-gray-900">Visit Support Page</p>
-                      <p className="text-sm text-emerald-700">locumstation.co.uk/support</p>
+                      <p className="font-semibold text-gray-900">Get In Touch</p>
+                      <p className="text-sm text-emerald-700">locumstation.co.uk/contact</p>
                     </div>
                   </a>
                   <a
