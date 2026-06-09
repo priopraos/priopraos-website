@@ -123,7 +123,7 @@ const LocumStation = () => {
                     </div>
                     <div>
                       <span className="text-xs font-bold tracking-wider text-gray-400 uppercase">Step 01</span>
-                      <h3 className="text-xl font-bold text-gray-900">The public job board</h3>
+                      <h3 className="text-xl font-bold text-gray-900">Clinical need determines priority</h3>
                     </div>
                   </div>
                   <p className="text-lg text-gray-600 leading-relaxed text-left md:text-justify">
@@ -140,7 +140,7 @@ const LocumStation = () => {
                     </div>
                     <div>
                       <span className="text-xs font-bold tracking-wider text-gray-400 uppercase">Step 02</span>
-                      <h3 className="text-xl font-bold text-gray-900">Clinician shift detail</h3>
+                      <h3 className="text-xl font-bold text-gray-900">Responding to the equity call</h3>
                     </div>
                   </div>
                   <p className="text-lg text-gray-600 leading-relaxed text-left md:text-justify">
@@ -162,20 +162,20 @@ const LocumStation = () => {
                         : 'text-gray-500 hover:text-gray-700'
                     }`}
                   >
-                    <span className="hidden sm:inline">The public job board</span>
-                    <span className="sm:hidden">Job board</span>
+                                        <span className="hidden sm:inline">The public job board</span>
+                                        <span className="sm:hidden">Job board</span>
                   </button>
                   <button
-                    type="button"
-                    onClick={() => setActiveView('shiftDetail')}
-                    className={`flex-1 px-4 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 ${
-                      activeView === 'shiftDetail'
-                        ? 'bg-white text-emerald-600 shadow-sm'
-                        : 'text-gray-500 hover:text-gray-700'
-                    }`}
+                                        type="button"
+                                        onClick={() => setActiveView('shiftDetail')}
+                                        className={`flex-1 px-4 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                                          activeView === 'shiftDetail'
+                                            ? 'bg-white text-emerald-600 shadow-sm'
+                                            : 'text-gray-500 hover:text-gray-700'
+                                        }`}
                   >
-                    <span className="hidden sm:inline">Clinician shift detail</span>
-                    <span className="sm:hidden">Shift detail</span>
+                                        <span className="hidden sm:inline">Clinician shift detail</span>
+                                        <span className="sm:hidden">Shift detail</span>
                   </button>
                 </div>
 
@@ -243,7 +243,7 @@ const LocumStation = () => {
                 </div>
                 <div>
                   <span className="text-xs font-bold tracking-wider text-gray-400 uppercase">Step 03</span>
-                  <h3 className="text-xl font-bold text-gray-900">The Equity Compliance Engine™</h3>
+                  <h3 className="text-xl font-bold text-gray-900">Confirming equity contribution</h3>
                 </div>
               </div>
               <p className="text-lg text-gray-600 leading-relaxed text-left md:text-justify">
@@ -252,9 +252,9 @@ const LocumStation = () => {
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={450}>
+                    <ScrollReveal delay={450}>
             <p className="mt-12 text-sm text-gray-500 leading-relaxed italic text-left md:text-justify">
-              The EFE™ score and equity grade assigned to each posting express an assessment of community clinical need based on independently verified open government data inputs at the time of scoring. They do not constitute a clinical assessment, a health needs analysis, or a regulatory determination. The score reflects the data inputs available at the point of posting and is updated when those data sources are refreshed by their publishers. All source data is published under Crown copyright Open Government Licence v3.0 and is independently verifiable.
+              <strong>Disclaimer:</strong> The EFE™ score and equity grade assigned to each posting express an assessment of community clinical need based on independently verified open government data inputs at the time of scoring. They do not constitute a clinical assessment, a health needs analysis, or a regulatory determination. The score reflects the data inputs available at the point of posting and is updated when those data sources are refreshed by their publishers. All source data is published under Crown copyright Open Government Licence v3.0 and is independently verifiable.
             </p>
           </ScrollReveal>
         </div>
