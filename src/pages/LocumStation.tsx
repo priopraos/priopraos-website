@@ -4,6 +4,7 @@ import {
   Database, Lock, BarChart3, Users, Building2, Activity, ZoomIn, X,
 } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
+import { usePageMeta } from '../hooks/usePageMeta';
 
 const JOB_BOARD_CAPTION =
   'Locum Station public job board — shifts sorted by EFE™ equity grade. Grade A (Critical Need) postings surface first. Accessible to all visitors without registration.';
@@ -11,6 +12,7 @@ const SHIFT_DETAIL_CAPTION =
   'Locum Station clinician shift detail view — community need profile, four dimension scores with named government data sources, Core20PLUS5 flag status, and EquityMark™ points preview displayed before the clinician applies.';
 
 const LocumStation = () => {
+  usePageMeta('Locum Station — Our NHS Workforce Platform | PrioraOS', 'Locum Station is the PrioraOS platform for NHS general practice: equity-scored locum shifts, an EquityMark™ clinician credential, and automated health inequalities reporting.');
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
   const [lightboxAlt, setLightboxAlt] = useState('');
   const [activeView, setActiveView] = useState<'jobBoard' | 'shiftDetail'>('jobBoard');

@@ -1,9 +1,11 @@
 import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
+import { usePageMeta } from '../hooks/usePageMeta';
 
 const LAST_UPDATED = 'May 2026';
 
 const Terms = () => {
+  usePageMeta('Terms of Service | PrioraOS', 'The terms governing use of the PrioraOS website and services, operated by PrioraOS Ltd.');
   return (
     <div className="bg-white min-h-screen">
       <section className="relative overflow-hidden bg-gradient-to-br from-[#003087] via-[#005EB8] to-[#0072CE] py-20 lg:py-28">

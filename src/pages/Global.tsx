@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Globe, MapPin } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
+import { usePageMeta } from '../hooks/usePageMeta';
 
 const AUSTRALIA_DATA_SOURCES: { label: string; href: string }[] = [
   {
@@ -68,6 +69,7 @@ const NEW_ZEALAND_DATA_SOURCES: { label: string; href: string }[] = [
 ];
 
 const Global = () => {
+  usePageMeta('Global — Public Health Systems Beyond the UK | PrioraOS', 'PrioraOS is built on open population health data, so the same method applies wherever comparable statistics are published. How we think about deployment beyond the NHS.');
   return (
     <div className="bg-white">
       {/* ═══════════ HERO ═══════════ */}

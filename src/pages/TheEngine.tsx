@@ -2,9 +2,11 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, BarChart3, Award, FileText, Shield, Download, Sparkles, CheckCircle } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
+import { usePageMeta } from '../hooks/usePageMeta';
 
 
 const TheEngine = () => {
+  usePageMeta('The Engine — How PrioraOS Scores Clinical Need | PrioraOS', 'The scoring engine behind PrioraOS: how open government data on deprivation, workforce and geography becomes a single, auditable measure of community clinical need.');
   useEffect(() => {
     const hash = window.location.hash;
     if (!hash) return;

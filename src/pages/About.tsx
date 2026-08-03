@@ -1,7 +1,9 @@
 import { Sparkles } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
+import { usePageMeta } from '../hooks/usePageMeta';
 
 const About = () => {
+  usePageMeta('About PrioraOS', 'PrioraOS Ltd builds clinical priority infrastructure for public health systems. Who we are, what we believe, and why equitable access should not depend on where you live.');
   return (
     <div className="bg-white">
       {/* ═══════════ HERO ═══════════ */}

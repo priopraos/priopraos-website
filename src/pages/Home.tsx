@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Shield, Database, Globe, CheckCircle, Sparkles, ExternalLink, BarChart3, Users, FileText, Award, Activity, ChevronDown, Building2, GraduationCap, ClipboardCheck, MapPin, X, ZoomIn, Briefcase, ShoppingCart, Network, UserCheck, Scale, BarChart2 } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
+import { usePageMeta } from '../hooks/usePageMeta';
 
 const USE_CASES = [
   {
@@ -55,6 +56,7 @@ const USE_CASES = [
 ];
 
 const Home = () => {
+  usePageMeta('PrioraOS — Clinical Priority Infrastructure for Public Health Systems', 'PrioraOS turns publicly available population health statistics into equity-directed clinical workforce deployment. Operating in the UK NHS, designed for global public health systems.');
   const [heroVisible, setHeroVisible] = useState(false);
   const [efeOpen, setEfeOpen] = useState(false);
   const [emOpen, setEmOpen] = useState(false);

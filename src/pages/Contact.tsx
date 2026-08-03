@@ -2,8 +2,10 @@ import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { ArrowRight, Mail, ExternalLink, Building2, Stethoscope, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
+import { usePageMeta } from '../hooks/usePageMeta';
 
 const Contact = () => {
+  usePageMeta('Contact PrioraOS', 'Speak to the PrioraOS team about clinical priority infrastructure, partnerships, or a technical briefing.');
   const [searchParams] = useSearchParams();
   const [formData, setFormData] = useState({
     name: '',

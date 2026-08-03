@@ -1,9 +1,11 @@
 import type { ReactNode } from 'react';
 import ScrollReveal from '../components/ScrollReveal';
+import { usePageMeta } from '../hooks/usePageMeta';
 
 const LAST_UPDATED = 'May 2026';
 
 const Privacy = () => {
+  usePageMeta('Privacy Policy | PrioraOS', 'How PrioraOS Ltd collects, uses and protects personal data, and your rights under UK GDPR.');
   return (
     <div className="bg-white min-h-screen">
       <section className="relative overflow-hidden bg-gradient-to-br from-[#003087] via-[#005EB8] to-[#0072CE] py-20 lg:py-28">
