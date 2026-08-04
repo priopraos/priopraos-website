@@ -57,8 +57,11 @@ app.http('contact', {
     const subject = `[PrioraOS] ${ENQUIRY_LABELS[enquiryType] || enquiryType} — ${name}`;
 
     try {
+      // brand: this form lives on prioraos.com, so the acknowledgement the
+      // enquirer receives must be PrioraOS-branded. Without it they were sent a
+      // Locum Station email about a locum marketplace they never asked about.
       const result = await post('https://api.locumstation.co.uk/api/contact', {
-        name, email, organisation, role, subject, message,
+        name, email, organisation, role, subject, message, brand: 'prioraos',
       });
       context.log(`Proxied contact form: status=${result.status}`);
     } catch (err) {
