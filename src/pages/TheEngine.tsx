@@ -459,20 +459,20 @@ const TheEngine = () => {
 
           {/* Report formats */}
           <ScrollReveal delay={200}>
-            <h3 className="text-xl font-bold text-gray-900 mb-6">REPORT FORMATS.</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-6">WHAT THE REPORT CONTAINS.</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               {[
                 {
-                  title: 'Full Activity Report',
-                  body: 'Complete record of all equity-scored engagement activity, dimension scores, and grade history for the reporting period. Designed for annual equity reporting and care quality inspection evidence.',
+                  title: 'Engagement activity',
+                  body: 'Complete record of all equity-scored engagement activity, dimension scores, and grade history for the reporting period. Supports annual equity reporting and care quality inspection evidence.',
                 },
                 {
-                  title: 'Specialty Need Summary',
-                  body: 'Filtered view of all engagements carrying a Specialty Need Flag alongside condition prevalence profiles for the relevant local authority. Designed for specialty-level health inequalities reporting obligations.',
+                  title: 'Specialty need',
+                  body: 'Every engagement carrying a Specialty Need Flag, alongside condition prevalence measured at the GP practice serving the posting location. Supports specialty-level health inequalities reporting obligations.',
                 },
                 {
-                  title: 'Social Value Procurement Report',
-                  body: 'Formatted output aligned with national procurement Social Value submission requirements. Full data provenance from independently published government sources. Designed for procurement bodies requiring equity-directed workforce evidence with traceable independent sourcing.',
+                  title: 'Social value provenance',
+                  body: 'Equity-directed workforce evidence aligned with national procurement Social Value requirements, with full data provenance from independently published government sources.',
                 },
               ].map((r, i) => (
                 <div key={i} className="group relative h-full bg-white rounded-2xl border border-gray-100 p-6 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">

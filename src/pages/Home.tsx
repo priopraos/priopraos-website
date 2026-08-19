@@ -34,7 +34,7 @@ const USE_CASES = [
     label: 'Procurement Authorities',
     icon: Shield,
     heading: 'Procurement Authorities',
-    body: 'Public sector procurement bodies applying Social Value weighting to healthcare workforce contracts. The ECE™ Social Value Report is formatted for direct submission under national procurement policy frameworks.',
+    body: 'Public sector procurement bodies applying Social Value weighting to healthcare workforce contracts. The ECE™ report carries equity-directed workforce evidence for submission under national procurement policy frameworks.',
     cta: { label: 'Learn More', to: '/contact' },
   },
   {
@@ -335,7 +335,7 @@ const Home = () => {
                         </div>
                       </div>
                       <p className="text-xs text-gray-500 mt-3 text-center">
-                        Sample ECE™ Full Activity Report — formatted for CQC inspection and PPN 06/20 submission
+                        Sample ECE™ report — formatted for CQC inspection and Social Value procurement submission
                       </p>
                     </button>
                     <p className="text-xs text-gray-500 mt-2 text-center">
@@ -754,7 +754,7 @@ const Home = () => {
                   <span className="text-yellow-400 text-sm font-semibold uppercase tracking-wider">Procurement and Social Value Bodies</span>
                 </div>
                 <p className="text-lg text-blue-100/90 leading-relaxed mb-6">
-                  Public sector procurement bodies and social value assessment authorities applying equity and social value weighting to healthcare workforce contracts. The ECE™ Social Value Report is formatted for direct submission under national procurement policy frameworks, with full data provenance from independently published government sources.
+                  Public sector procurement bodies and social value assessment authorities applying equity and social value weighting to healthcare workforce contracts. The ECE™ report carries equity-directed workforce evidence for submission under national procurement policy frameworks, with full data provenance from independently published government sources.
                 </p>
                 <div className="bg-yellow-400 border border-yellow-300 rounded-2xl p-6 shadow-lg shadow-yellow-400/20">
                   <p className="text-[#003087] text-sm leading-relaxed italic font-medium">
