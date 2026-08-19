@@ -304,7 +304,7 @@ const LocumStation = () => {
                 n: '2',
                 source: 'GP Workforce Statistics',
                 org: 'NHS Digital',
-                desc: 'Staff shortage intensity at sub-ICB level, updated monthly.',
+                desc: 'Staff shortage intensity at individual GP practice level, updated monthly.',
                 dim: 'Workforce Shortage',
               },
               {
@@ -545,13 +545,13 @@ const LocumStation = () => {
               <div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">For Providers:</h3>
                 <p className="text-gray-600 leading-relaxed text-left md:text-justify">
-                  We welcome registrations from all CQC-registered organisations delivering NHS care in England, including GP Practices, Primary Care Networks, NHS Trusts across acute, mental health, and community settings, Urgent Treatment Centres, and Out-of-Hours providers. Social enterprises and independent sector organisations holding NHS contracts are equally welcome.
+                  Locum Station is open to NHS general practice in England: GP Practices, Primary Care Networks and GP federations. The EFE™ derives 55% of its weight from GP workforce and GP patient-registration data, so a score is only meaningful in a general practice setting. Other NHS organisations are welcome to register interest at support@locumstation.co.uk and we will be in touch as we widen access.
                 </p>
               </div>
               <div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">For Clinicians:</h3>
                 <p className="text-gray-600 leading-relaxed text-left md:text-justify">
-                  We are currently onboarding GMC-registered locum doctors across primary care, emergency medicine, acute medicine, psychiatry, and paediatrics. Registration for NMC-registered nurses and Allied Health Professionals is in active development and will open soon.
+                  Ten clinical roles are supported, each holding statutory registration on a public register: GP Locum and Physician Associate (GMC); Practice Nurse and Advanced Nurse Practitioner (NMC); Paramedic, Physiotherapist, Occupational Therapist and Dietitian (HCPC); Clinical Pharmacist (GPhC); and Mental Health Practitioner (NMC or HCPC).
                 </p>
               </div>
             </div>

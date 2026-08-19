@@ -127,9 +127,9 @@ const Privacy = () => {
                   We do not sell your personal data. We do not share your personal data with third parties for marketing purposes. We share data only with the following categories of processor, each acting under a written data processing agreement:
                 </p>
 
-                <h4 className="text-lg font-bold text-gray-900 mb-3">5.1 — Formspree (or equivalent form handling service)</h4>
+                <h4 className="text-lg font-bold text-gray-900 mb-3">5.1 — Contact form handling</h4>
                 <p className="text-left md:text-justify mb-8">
-                  We use a form handling service to receive contact form submissions. This service acts as a data processor on our behalf, processing form submission data only for the purpose of delivering it to our email inbox. The service does not retain your data beyond this delivery function.
+                  No third-party form service is involved. A submission is received by an Azure Function running on the same Microsoft Azure infrastructure that hosts this site, forwarded over HTTPS to our own API at api.locumstation.co.uk, and delivered to our inbox by Microsoft Azure Communication Services. The only processors are the two named in 5.2 and 5.3.
                 </p>
 
                 <h4 className="text-lg font-bold text-gray-900 mb-3">5.2 — Microsoft Azure</h4>

@@ -143,7 +143,7 @@ const Terms = () => {
 
               <Section title="8. CONTACT FORM AND COMMUNICATIONS">
                 <p className="text-left md:text-justify mb-4">
-                  When you submit an enquiry through the contact form at prioraos.com/contact, you are inviting PrioraOS Ltd to enter into a discussion about the subject of your enquiry. Submission of the form does not create any legally binding obligation on either party. PrioraOS Ltd will use reasonable efforts to respond to enquiries within two business days but cannot guarantee response times.
+                  When you submit an enquiry through the contact form at prioraos.com/contact, you are inviting PrioraOS Ltd to enter into a discussion about the subject of your enquiry. Submission of the form does not create any legally binding obligation on either party. PrioraOS Ltd will use reasonable efforts to respond to enquiries usually within one working day but cannot guarantee response times.
                 </p>
                 <p className="text-left md:text-justify">
                   All communications submitted through this website are subject to our{' '}
