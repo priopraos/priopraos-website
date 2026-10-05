@@ -451,7 +451,7 @@ const Home = () => {
                       </div>
                     </div>
                     <p className="text-gray-500 text-sm leading-relaxed text-left md:text-justify">
-                      Clinicians identify and respond to the highest-need postings first, simultaneously building their EquityMark™ credential with every confirmed engagement in a higher-need community. Healthcare providers increase the likelihood of fulfilling hard-to-fill clinical coverage and receive an automated structured compliance report from the Equity Compliance Engine™ documenting every confirmed engagement, the community it served, and the independently verified clinical need of that community.
+                      Clinicians identify and respond to the highest-need postings first, simultaneously building their EquityMark™ credential with every confirmed engagement in a higher-need community. Healthcare providers increase the likelihood of fulfilling hard-to-fill clinical coverage and receive an automated structured compliance report from the Equity Compliance Engine™ documenting every confirmed engagement, the community it served, and the clinical need of that community, measured from independently published data.
                     </p>
                   </div>
                 </div>
