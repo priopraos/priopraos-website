@@ -105,7 +105,7 @@ const Home = () => {
                   alt="Live EFE Preview — Blackpool equity score showing IMD, SSI, PCR, and GRI dimensions"
                   className="rounded-2xl shadow-2xl w-full h-auto"
                 />
-                <p className="text-center text-[10px] font-mono text-blue-200/70 mt-2 tracking-wide">
+                <p className="text-center text-xs font-mono text-blue-200/70 mt-2 tracking-wide">
                   Powered by PrioraOS • Open Government Data • OGL v3.0
                 </p>
               </div>
@@ -197,7 +197,7 @@ const Home = () => {
                 </p>
               </blockquote>
               <p className="text-lg text-gray-500 leading-relaxed text-left md:text-justify">
-                PrioraOS provides that infrastructure through three proprietary innovations that together form a closed loop of equity accountability with no equivalent in the healthcare workforce technology market.
+                PrioraOS provides that infrastructure through three proprietary innovations that together form a closed loop of equity accountability.
               </p>
             </div>
           </ScrollReveal>
@@ -217,10 +217,10 @@ const Home = () => {
                       <h3 className="text-xl font-bold text-gray-900">The Equity Fulfilment Engine™</h3>
                     </div>
                     <p className="text-xs font-semibold text-[#005EB8] uppercase tracking-wider mb-2 italic">
-                      Scores every posting by independently verified community need.
+                      Scores every posting by community need, measured from independently published data.
                     </p>
                     <p className="text-gray-500 text-sm leading-relaxed text-left md:text-justify">
-                      The EFE™ is a real-time algorithmic system that ranks temporary clinical postings by actual community need. Using open government data, it evaluates deprivation severity, workforce shortage, patient access pressure, and geographic remoteness to generate a composite equity score. The result is a strictly objective ranking where the highest-need communities are always served first, grounded entirely in independently published data rather than commercial logic.
+                      The EFE™ is a rules-based algorithmic system that ranks temporary clinical postings by actual community need. Using open government data, it evaluates deprivation severity, workforce shortage, patient access pressure, and geographic remoteness to generate a composite equity score. The result is a strictly objective ranking where the highest-need communities always appear first, grounded entirely in independently published data rather than commercial logic.
                     </p>
                     <a href="/engine#efe" className="inline-block mt-3 text-sm font-semibold text-[#005EB8] hover:text-[#003087] hover:underline transition-colors">
                       [Learn more]
@@ -284,10 +284,10 @@ const Home = () => {
                       <h3 className="text-xl font-bold text-gray-900">EquityMark™</h3>
                     </div>
                     <p className="text-xs font-semibold text-emerald-600 uppercase tracking-wider mb-2 italic">
-                      The first professional equity credential in healthcare.
+                      A professional equity credential built from clinical practice.
                     </p>
                     <p className="text-gray-500 text-sm leading-relaxed text-left md:text-justify">
-                      EquityMark™ is the first professional recognition and credentialing system in the healthcare workforce market built around equity of deployment rather than commercial performance. Every confirmed engagement in a high-need community automatically contributes points toward a portable professional credential structured for professional revalidation, appraisal frameworks, and continuing professional development records. Across four progression levels, it transforms equity-directed clinical practice into independently verified career distinction, giving every clinician a documented record of the communities they chose to serve.
+                      EquityMark™ is a professional recognition and credentialing system built around equity of deployment rather than commercial performance. Every confirmed engagement in a high-need community automatically contributes points toward a portable professional credential structured for professional revalidation, appraisal frameworks, and continuing professional development records. Across four progression levels, it transforms equity-directed clinical practice into a documented career record, giving every clinician a documented record of the communities they chose to serve.
                     </p>
                     <a href="/engine#equitymark" className="inline-block mt-3 text-sm font-semibold text-emerald-600 hover:text-emerald-800 hover:underline transition-colors">
                       [Learn more]
@@ -406,7 +406,7 @@ const Home = () => {
                         </div>
                       </div>
                     </button>
-                    <p className="text-[11px] sm:text-xs text-gray-600 italic text-center mt-3 leading-relaxed px-1">
+                    <p className="text-xs sm:text-xs text-gray-600 italic text-center mt-3 leading-relaxed px-1">
                       Provider shift posting interface — EFE™ equity grade assigned automatically on postcode entry
                     </p>
                   </div>
@@ -436,7 +436,7 @@ const Home = () => {
                         </div>
                       </div>
                     </button>
-                    <p className="text-[11px] sm:text-xs text-gray-600 italic text-center mt-3 leading-relaxed px-1">
+                    <p className="text-xs sm:text-xs text-gray-600 italic text-center mt-3 leading-relaxed px-1">
                       Clinician shift detail view — community need profile, four dimension scores, and Core20PLUS5 flag status displayed before application
                     </p>
                   </div>
@@ -551,7 +551,7 @@ const Home = () => {
                         Locum Station is the trading name under which PrioraOS operates within the United Kingdom's National Health Service. It is a fully built clinical shift posting platform powered by the complete PrioraOS engine suite, where every shift posted by an NHS provider is independently scored by community clinical need before any clinician sees it.
                       </p>
                       <p className="text-gray-500 text-sm leading-relaxed text-left md:text-justify">
-                        In England, the EFE™ is calibrated against the English Indices of Deprivation 2025, NHS England GP Workforce Statistics, NHS Digital patient registration data, the ONS Rural-Urban Classification, and OHID Fingertips condition prevalence data. Every shift is scored, graded, and recorded. Every clinician who works in higher-need communities builds a verified professional equity credential. Every provider receives compliance evidence aligned with the Health and Care Act 2022, the CQC Single Assessment Framework, Procurement Policy Note 06/20, and the NHS England Core20PLUS5 national health inequalities programme.
+                        In England, the EFE™ is calibrated against the English Indices of Deprivation 2025, NHS England GP Workforce Statistics, NHS England patient registration data, the ONS Rural-Urban Classification, and OHID Fingertips condition prevalence data. Every shift is scored, graded, and recorded. Every clinician who works in higher-need communities builds a professional equity credential. Every provider receives compliance evidence aligned with the Health and Care Act 2022, the CQC Single Assessment Framework, Procurement Policy Note 002, and the NHS England Core20PLUS5 national health inequalities programme.
                       </p>
                       <a href="/locum-station" className="inline-block mt-3 text-sm font-semibold text-emerald-600 hover:text-emerald-800 hover:underline transition-colors">
                         [Learn more]
@@ -575,14 +575,14 @@ const Home = () => {
                         </div>
                       </div>
                     </button>
-                    <p className="text-[11px] sm:text-xs text-gray-600 italic text-center mt-3 leading-relaxed px-1">
+                    <p className="text-xs sm:text-xs text-gray-600 italic text-center mt-3 leading-relaxed px-1">
                       Locum Station provider dashboard — live equity scoring, shift management, and automated ECE™ compliance reporting
                     </p>
                   </div>
                 </div>
                 <div className="mt-6 pt-6 border-t border-gray-100">
                   <p className="text-gray-500 text-sm leading-relaxed text-left md:text-justify">
-                    Locum Station is currently accepting founding cohort registrations from NHS providers and GMC-registered locum doctors. Registration for nursing and allied health professional locums is in development.
+                    Locum Station is currently accepting founding cohort registrations from NHS GP practices and Primary Care Networks, and from locum clinicians in ten roles registered with the GMC, NMC, HCPC or GPhC.
                   </p>
                 </div>
               </div>
@@ -666,7 +666,7 @@ const Home = () => {
                 </p>
                 <div className="bg-yellow-400 border border-yellow-300 rounded-2xl p-6 shadow-lg shadow-yellow-400/20">
                   <p className="text-[#003087] text-sm leading-relaxed italic font-medium">
-                    PrioraOS enables health system operators to deploy clinical resources based on verified population need rather than commercial urgency, transforming temporary workforce deployment into a measurable, documented equity intervention.
+                    PrioraOS enables health system operators to deploy clinical resources based on measured population need rather than commercial urgency, transforming temporary workforce deployment into a measurable, documented equity intervention.
                   </p>
                 </div>
                 <div className="mt-4">
@@ -726,7 +726,7 @@ const Home = () => {
                 </p>
                 <div className="bg-yellow-400 border border-yellow-300 rounded-2xl p-6 shadow-lg shadow-yellow-400/20">
                   <p className="text-[#003087] text-sm leading-relaxed italic font-medium">
-                    Every confirmed engagement in a high-need community builds a verified equity credential: an independently verifiable professional record that documents contribution to reducing health inequality, structured for revalidation and continuing professional development frameworks.
+                    Every confirmed engagement in a high-need community builds an equity credential: a professional record based on independently published data that documents contribution to reducing health inequality, structured for revalidation and continuing professional development frameworks.
                   </p>
                 </div>
                 <div className="mt-4">
@@ -788,7 +788,7 @@ const Home = () => {
                 </p>
                 <div className="bg-yellow-400 border border-yellow-300 rounded-2xl p-6 shadow-lg shadow-yellow-400/20">
                   <p className="text-[#003087] text-sm leading-relaxed italic font-medium">
-                    A continuously updated dataset linking workforce deployment decisions to independently verified population health data, providing researchers with an empirical foundation for health equity analysis that has not previously existed.
+                    A continuously updated dataset linking workforce deployment decisions to independently published population health data, giving researchers an empirical foundation for health equity analysis.
                   </p>
                 </div>
                 <div className="mt-4">

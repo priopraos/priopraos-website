@@ -41,7 +41,7 @@ const About = () => {
                 PrioraOS Ltd is a healthcare infrastructure technology company incorporated in England and Wales. We build software that helps health systems direct temporary clinical workforce capacity toward communities with the greatest measurable need.
               </p>
               <p className="text-left md:text-justify">
-                Our platform combines real-time equity scoring, compliance evidence generation, and clinician recognition into one operational workflow. PrioraOS powers Locum Station in the United Kingdom and is designed for adaptation across international public health systems with compatible open data sources.
+                Our platform combines equity scoring, compliance evidence generation, and clinician recognition into one operational workflow. PrioraOS powers Locum Station in the United Kingdom and is designed for adaptation across international public health systems with compatible open data sources.
               </p>
             </div>
           </ScrollReveal>

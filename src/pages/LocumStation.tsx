@@ -7,7 +7,7 @@ import ScrollReveal from '../components/ScrollReveal';
 import { usePageMeta } from '../hooks/usePageMeta';
 
 const JOB_BOARD_CAPTION =
-  'Locum Station public job board — shifts sorted by EFE™ equity grade. Grade A (Critical Need) postings surface first. Accessible to all visitors without registration.';
+  'Locum Station public shifts page — shifts sorted by EFE™ equity grade. Grade A (Critical Need) postings surface first. Accessible to all visitors without registration.';
 const SHIFT_DETAIL_CAPTION =
   'Locum Station clinician shift detail view — community need profile, four dimension scores with named government data sources, Core20PLUS5 flag status, and EquityMark™ points preview displayed before the clinician applies.';
 
@@ -82,10 +82,10 @@ const LocumStation = () => {
             </div>
             <div className="text-lg text-gray-600 leading-relaxed space-y-6 text-left md:text-justify">
               <p>
-                Locum Station is a clinical shift posting service powered by the complete PrioraOS engine suite, connecting NHS healthcare providers with registered locum clinicians. Every shift posted is independently scored by community clinical need before any clinician sees it. Every confirmed engagement generates an automated compliance record. Every clinician who works in higher-need communities builds a verified professional equity credential.
+                Locum Station is a clinical shift posting service powered by the complete PrioraOS engine suite, connecting NHS healthcare providers with registered locum clinicians. Every shift posted is independently scored by community clinical need before any clinician sees it. Every confirmed engagement generates an automated compliance record. Every clinician who works in higher-need communities builds a professional equity credential.
               </p>
               <p>
-                It is the first temporary clinical workforce service in the UK where allocation priority is determined by independently verified clinical need rather than commercial logic.
+                It is a temporary clinical workforce service in which allocation priority is determined by clinical need measured from independently published data rather than commercial logic.
               </p>
             </div>
           </ScrollReveal>
@@ -129,7 +129,7 @@ const LocumStation = () => {
                     </div>
                   </div>
                   <p className="text-lg text-gray-600 leading-relaxed text-left md:text-justify">
-                    Every shift posted on Locum Station appears on a publicly accessible job board at locumstation.co.uk/shifts. Shifts are sorted by EFE™ equity grade: Grade A (Critical Need) postings surface first. This sort order is not configurable. It cannot be overridden by pay rate, urgency, or posting recency.
+                    Every shift posted on Locum Station appears on a public shifts page at locumstation.co.uk/shifts. Shifts are sorted by EFE™ equity grade: Grade A (Critical Need) postings surface first. This sort order is not configurable. It cannot be overridden by pay rate, urgency, or posting recency.
                   </p>
                 </div>
 
@@ -164,8 +164,8 @@ const LocumStation = () => {
                         : 'text-gray-500 hover:text-gray-700'
                     }`}
                   >
-                                        <span className="hidden sm:inline">The public job board</span>
-                                        <span className="sm:hidden">Job board</span>
+                                        <span className="hidden sm:inline">The public shifts page</span>
+                                        <span className="sm:hidden">Shifts page</span>
                   </button>
                   <button
                                         type="button"
@@ -191,7 +191,7 @@ const LocumStation = () => {
                         setLightboxAlt(JOB_BOARD_CAPTION);
                       }}
                       className="relative group/image w-full block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#005EB8] focus-visible:ring-offset-2 rounded-lg"
-                      aria-label="Enlarge public job board screenshot"
+                      aria-label="Enlarge public shifts page screenshot"
                     >
                       <img
                         src="/24.png"
@@ -229,7 +229,7 @@ const LocumStation = () => {
                 </div>
 
                 {/* Caption */}
-                <p className="text-[11px] sm:text-xs text-gray-600 italic text-center mt-3 leading-relaxed px-1">
+                <p className="text-xs sm:text-xs text-gray-600 italic text-center mt-3 leading-relaxed px-1">
                   {activeView === 'jobBoard' ? JOB_BOARD_CAPTION : SHIFT_DETAIL_CAPTION}
                 </p>
               </div>
@@ -256,7 +256,7 @@ const LocumStation = () => {
 
                     <ScrollReveal delay={450}>
             <p className="mt-12 text-sm text-gray-500 leading-relaxed italic text-left md:text-justify">
-              <strong>Disclaimer:</strong> The EFE™ score and equity grade assigned to each posting express an assessment of community clinical need based on independently verified open government data inputs at the time of scoring. They do not constitute a clinical assessment, a health needs analysis, or a regulatory determination. The score reflects the data inputs available at the point of posting and is updated when those data sources are refreshed by their publishers. All source data is published under Crown copyright Open Government Licence v3.0 and is independently verifiable.
+              <strong>Disclaimer:</strong> The EFE™ score and equity grade assigned to each posting express an assessment of community clinical need based on open government data inputs at the time of scoring. They do not constitute a clinical assessment, a health needs analysis, or a regulatory determination. The score reflects the data inputs available at the point of posting and is updated when those data sources are refreshed by their publishers. All source data is published under Crown copyright Open Government Licence v3.0 and is independently verifiable.
             </p>
           </ScrollReveal>
         </div>
@@ -303,14 +303,14 @@ const LocumStation = () => {
               {
                 n: '2',
                 source: 'GP Workforce Statistics',
-                org: 'NHS Digital',
+                org: 'NHS England',
                 desc: 'Staff shortage intensity at individual GP practice level, updated monthly.',
                 dim: 'Workforce Shortage',
               },
               {
                 n: '3',
                 source: 'Patients Registered at a GP Practice',
-                org: 'NHS Digital',
+                org: 'NHS England',
                 desc: 'Patient-to-clinician ratio at individual practice level, updated monthly.',
                 dim: 'Patient Access',
               },
@@ -402,9 +402,9 @@ const LocumStation = () => {
                 </p>
                 <div className="space-y-3">
                   {[
-                    { title: 'Health and Care Act 2022', desc: 'Statutory duty to reduce inequalities in access to health services.' },
+                    { title: 'Health and Care Act 2022', desc: 'Duty on NHS England and ICBs to have regard to reducing health inequalities.' },
                     { title: 'CQC Single Assessment Framework', desc: 'Equity in Access quality statement under the Responsive and Well-Led categories.' },
-                    { title: 'Procurement Policy Note 06/20', desc: '10% minimum Social Value weighting in NHS procurement scoring.' },
+                    { title: 'Procurement Policy Note 002', desc: 'Minimum 10% social value weighting in central government procurement; NHS bodies are expected to align.' },
                     { title: 'NHS England Core20PLUS5', desc: 'National health inequalities programme for the most deprived 20% of the population across five clinical priority areas.' },
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-3 bg-gray-50 rounded-xl p-4 border border-gray-100">
@@ -428,7 +428,7 @@ const LocumStation = () => {
                     <Award className="w-6 h-6 text-emerald-600" />
                   </div>
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-wider text-emerald-600">GMC-Registered Locums</p>
+                    <p className="text-xs font-bold uppercase tracking-wider text-emerald-600">Registered Locum Clinicians</p>
                     <h3 className="text-xl font-bold text-gray-900">What Clinicians Receive</h3>
                   </div>
                 </div>
@@ -438,9 +438,9 @@ const LocumStation = () => {
                 <div className="space-y-3">
                   {[
                     { icon: CheckCircle, label: 'EquityMark™ credential built automatically with every shift' },
-                    { icon: FileText, label: 'Downloadable Contribution Report structured for GMC revalidation' },
+                    { icon: FileText, label: 'Downloadable Contribution Report structured for appraisal and revalidation' },
                     { icon: CheckCircle, label: 'Formatted for CPD portfolio submission' },
-                    { icon: Award, label: 'Free to register and use the platform, permanently' },
+                    { icon: Award, label: 'Free to register and use the platform' },
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-3 bg-emerald-50/60 rounded-xl p-4 border border-emerald-100">
                       <item.icon className="w-4 h-4 text-emerald-600 flex-shrink-0" />
@@ -463,7 +463,7 @@ const LocumStation = () => {
                 What the Platform <span className="text-[#005EB8]">Does Not Do</span>
               </h2>
               <div className="text-gray-600 leading-relaxed space-y-4 text-left md:text-justify">
-                <p>PrioraOS Ltd is not an employment business or employment agency as defined under the Employment Agencies Act 1973. It does not intermediate the contractual relationship between any provider and any clinician.</p>
+                <p>PrioraOS Ltd provides equity software services for the temporary clinical sessions that registered GP practices and Primary Care Networks publish on Locum Station. It is not an employment business or employment agency as defined under the Employment Agencies Act 1973, and it does not intermediate the contractual relationship between any provider and any clinician.</p>
                 <p>Locum Station does not employ or supply clinicians, negotiate or set clinical pay rates, or process payments between providers and clinicians. Providers pay clinicians directly by BACS transfer. Locum Station is not in the payment chain at any stage.</p>
                 <p>Locum Station does not access or process patient-identifiable data at any stage.</p>
                 <p>The EFE™ equity grade informs how a posting is presented in the discovery interface. It does not override provider decision-making and does not guarantee that any posting will be fulfilled. Providers should not rely solely on Locum Station for urgent or time-critical clinical staffing requirements. For time-critical cover, maintain parallel channels including NHS staff banks and direct clinician contacts.</p>
@@ -496,7 +496,7 @@ const LocumStation = () => {
                 <span className="text-5xl font-extrabold">£99</span>
                 <span className="text-blue-200 mb-2 text-lg">/month</span>
               </div>
-              <p className="text-blue-100 text-sm mb-6">After a 30-day free trial. No placement commissions. No urgency premiums.</p>
+              <p className="text-blue-100 text-sm mb-6">Founding practices: free until 31 March 2027. Practices joining after that receive 30 days free. Nothing is charged unless you choose a paid plan. No placement commissions. No urgency premiums.</p>
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="bg-white/10 rounded-xl p-5 border border-white/20">
                   <div className="text-3xl font-extrabold text-yellow-300 mb-1">10%</div>
@@ -510,7 +510,7 @@ const LocumStation = () => {
             </div>
             <div className="flex items-center gap-3 bg-emerald-50 rounded-xl px-6 py-4 border border-emerald-100">
               <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0" />
-              <p className="text-sm font-semibold text-gray-700">Clinicians register and use the platform for free, permanently.</p>
+              <p className="text-sm font-semibold text-gray-700">Clinicians register and use the platform free of charge.</p>
             </div>
           </ScrollReveal>
         </div>
