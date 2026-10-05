@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { usePageMeta } from '../hooks/usePageMeta';
 
-const LAST_UPDATED = 'May 2026';
+const LAST_UPDATED = 'October 2026';
 
 const Terms = () => {
   usePageMeta('Terms of Service | PrioraOS', 'The terms governing use of the PrioraOS website and services, operated by PrioraOS Ltd.');
@@ -26,8 +26,8 @@ const Terms = () => {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-gray-600 leading-relaxed space-y-12 text-base">
               <div className="rounded-xl border border-gray-200 bg-gray-50/80 p-6 sm:p-8 space-y-3 text-sm">
-                <MetaRow label="Document:" value="Terms of Service — prioraos.com" />
-                <MetaRow label="Version:" value="1.0 — Pre-Launch" />
+                <MetaRow label="Document:" value="Terms of Service: prioraos.com" />
+                <MetaRow label="Version:" value="1.1" />
                 <MetaRow label="Last Updated:" value={LAST_UPDATED} />
                 <MetaRow label="Applies to:" value="prioraos.com and all subdomains" />
                 <MetaRow label="Company:" value="PrioraOS Ltd" />
@@ -36,7 +36,7 @@ const Terms = () => {
               </div>
 
               <p className="text-left md:text-justify">
-                PrioraOS Ltd provides infrastructure and technology services. The consumer-facing Locum Station platform at locumstation.co.uk has its own Terms of Service, Privacy Policy, and legal framework which govern use of that platform. The terms on this page govern use of the prioraos.com website only.
+                PrioraOS Ltd provides infrastructure and technology services. The Locum Station platform at locumstation.co.uk has its own Terms of Service, Privacy Policy, and legal framework which govern use of that platform. The terms on this page govern use of the prioraos.com website only.
               </p>
 
               <p className="text-left md:text-justify">
@@ -88,9 +88,9 @@ const Terms = () => {
                 </p>
               </Section>
 
-              <Section title="4. NATURE OF THE SERVICE — IMPORTANT LEGAL STATEMENT">
+              <Section title="4. NATURE OF THE SERVICE: IMPORTANT LEGAL STATEMENT">
                 <p className="text-left md:text-justify mb-4">
-                  PrioraOS Ltd is a software company. Locum Station, operated by PrioraOS Ltd at locumstation.co.uk, is a clinical shift posting service.
+                  PrioraOS Ltd is a software company. Locum Station, operated by PrioraOS Ltd at locumstation.co.uk, provides equity software services for the temporary clinical sessions that registered GP practices and Primary Care Networks publish on it.
                 </p>
                 <p className="text-left md:text-justify mb-4">
                   PrioraOS Ltd is not an employment business or employment agency as defined under the Employment Agencies Act 1973 and the Conduct of Employment Agencies and Employment Businesses Regulations 2003. PrioraOS Ltd does not supply workers, intermediate the contractual relationship between healthcare providers and clinicians, set or negotiate clinical pay rates, or process payments between any parties. The contractual relationship for any clinical engagement conducted through Locum Station is solely between the relevant healthcare provider and the relevant clinician.
@@ -108,12 +108,12 @@ const Terms = () => {
                   Descriptions of the PrioraOS engine suite and its components represent the current state of the technology and commercial deployment at the date of publication. They are subject to change as the technology develops.
                 </p>
 
-                <h4 className="text-lg font-bold text-gray-900 mb-3">5.1 — EFE Scoring</h4>
+                <h4 className="text-lg font-bold text-gray-900 mb-3">5.1 EFE Scoring</h4>
                 <p className="text-left md:text-justify mb-6">
                   The Equity Fulfilment Engine™ described on this website calculates composite community clinical need scores based on open government data published by national government bodies at the time of calculation. PrioraOS Ltd makes no warranty as to the absolute accuracy of any individual score for any specific posting. Scores reflect the data inputs available at the point of calculation and are updated when the underlying government data sources are refreshed by their publishers. EFE™ scores do not constitute a clinical assessment, a health needs analysis, or a regulatory determination.
                 </p>
 
-                <h4 className="text-lg font-bold text-gray-900 mb-3">5.2 — International Deployment</h4>
+                <h4 className="text-lg font-bold text-gray-900 mb-3">5.2 International Deployment</h4>
                 <p className="text-left md:text-justify">
                   The international deployment framework described on this website reflects the architectural capability of the PrioraOS infrastructure to be recalibrated for jurisdictions with equivalent open government data. Active deployment in Australia, Canada, and New Zealand has not yet been implemented. Nothing on this website constitutes a commitment to deploy in any specific jurisdiction or timeline.
                 </p>

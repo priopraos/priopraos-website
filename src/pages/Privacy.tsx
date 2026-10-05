@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import ScrollReveal from '../components/ScrollReveal';
 import { usePageMeta } from '../hooks/usePageMeta';
 
-const LAST_UPDATED = 'May 2026';
+const LAST_UPDATED = 'October 2026';
 
 const Privacy = () => {
   usePageMeta('Privacy Policy | PrioraOS', 'How PrioraOS Ltd collects, uses and protects personal data, and your rights under UK GDPR.');
@@ -26,8 +26,8 @@ const Privacy = () => {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-gray-600 leading-relaxed space-y-12 text-base">
               <div className="rounded-xl border border-gray-200 bg-gray-50/80 p-6 sm:p-8 space-y-3 text-sm">
-                <MetaRow label="Document:" value="Privacy Policy — prioraos.com" />
-                <MetaRow label="Version:" value="1.0 — Pre-Launch" />
+                <MetaRow label="Document:" value="Privacy Policy: prioraos.com" />
+                <MetaRow label="Version:" value="1.1" />
                 <MetaRow label="Last Updated:" value={LAST_UPDATED} />
                 <MetaRow label="Applies to:" value="prioraos.com and all subdomains" />
                 <MetaRow label="Company:" value="PrioraOS Ltd" />
@@ -58,7 +58,7 @@ const Privacy = () => {
               </Section>
 
               <Section title="2. WHAT DATA WE COLLECT">
-                <h4 className="text-lg font-bold text-gray-900 mb-3">2.1 — Contact Form Submissions</h4>
+                <h4 className="text-lg font-bold text-gray-900 mb-3">2.1 Contact Form Submissions</h4>
                 <p className="text-left md:text-justify mb-3">
                   When you submit an enquiry through the contact form at prioraos.com/contact, we collect:
                 </p>
@@ -74,19 +74,19 @@ const Privacy = () => {
                   We do not collect payment information, health data, national insurance numbers, or any special category personal data through this website.
                 </p>
 
-                <h4 className="text-lg font-bold text-gray-900 mb-3">2.2 — Server Log Data</h4>
+                <h4 className="text-lg font-bold text-gray-900 mb-3">2.2 Server Log Data</h4>
                 <p className="text-left md:text-justify mb-8">
                   Our hosting provider, Microsoft Azure, automatically collects standard server log data when you visit prioraos.com. This may include your IP address, browser type and version, the pages you visit, the time and date of your visit, and the duration of your visit. This data is processed by Azure for security monitoring and performance optimisation. It is not used to identify individual visitors and is not shared with third parties for any marketing purpose.
                 </p>
 
-                <h4 className="text-lg font-bold text-gray-900 mb-3">2.3 — Cookies</h4>
+                <h4 className="text-lg font-bold text-gray-900 mb-3">2.3 Cookies</h4>
                 <p className="text-left md:text-justify">
                   prioraos.com uses essential functional cookies only. These are required for the website to operate correctly. We do not use tracking cookies, advertising cookies, or third-party analytics cookies. A cookie notice appears on your first visit to the site. You may adjust your cookie preferences at any time through your browser settings. Disabling essential cookies may affect the functionality of the website.
                 </p>
               </Section>
 
               <Section title="3. WHY WE PROCESS YOUR DATA">
-                <h4 className="text-lg font-bold text-gray-900 mb-3">3.1 — Contact Form Data</h4>
+                <h4 className="text-lg font-bold text-gray-900 mb-3">3.1 Contact Form Data</h4>
                 <p className="text-left md:text-justify mb-4">
                   We process contact form submissions to respond to your enquiry, to maintain a record of institutional correspondence, and to follow up on expressed interest in institutional partnership, investment, or research collaboration.
                 </p>
@@ -94,7 +94,7 @@ const Privacy = () => {
                   <strong className="text-gray-900">Legal basis:</strong> Legitimate interests (Article 6(1)(f) UK GDPR). Our legitimate interest is in managing business relationships and responding to institutional enquiries about our products and services. This processing is necessary for the purpose and does not override your rights and interests.
                 </p>
 
-                <h4 className="text-lg font-bold text-gray-900 mb-3">3.2 — Server Log Data</h4>
+                <h4 className="text-lg font-bold text-gray-900 mb-3">3.2 Server Log Data</h4>
                 <p className="text-left md:text-justify mb-4">
                   We process server log data for website security monitoring, performance optimisation, and the detection and prevention of malicious activity.
                 </p>
@@ -102,7 +102,7 @@ const Privacy = () => {
                   <strong className="text-gray-900">Legal basis:</strong> Legitimate interests (Article 6(1)(f) UK GDPR). Our legitimate interest is in maintaining a secure and functional website.
                 </p>
 
-                <h4 className="text-lg font-bold text-gray-900 mb-3">3.3 — Automated Decision-Making</h4>
+                <h4 className="text-lg font-bold text-gray-900 mb-3">3.3 Automated Decision-Making</h4>
                 <p className="text-left md:text-justify">
                   prioraos.com does not engage in automated decision-making or profiling that produces legal or similarly significant effects on individuals. The Equity Fulfilment Engine™ described on this website operates within the Locum Station service at locumstation.co.uk and is addressed in the Locum Station Privacy Policy.
                 </p>
@@ -127,22 +127,22 @@ const Privacy = () => {
                   We do not sell your personal data. We do not share your personal data with third parties for marketing purposes. We share data only with the following categories of processor, each acting under a written data processing agreement:
                 </p>
 
-                <h4 className="text-lg font-bold text-gray-900 mb-3">5.1 — Contact form handling</h4>
+                <h4 className="text-lg font-bold text-gray-900 mb-3">5.1 Contact form handling</h4>
                 <p className="text-left md:text-justify mb-8">
                   No third-party form service is involved. A submission is received by an Azure Function running on the same Microsoft Azure infrastructure that hosts this site, forwarded over HTTPS to our own API at api.locumstation.co.uk, and delivered to our inbox by Microsoft Azure Communication Services. The only processors are the two named in 5.2 and 5.3.
                 </p>
 
-                <h4 className="text-lg font-bold text-gray-900 mb-3">5.2 — Microsoft Azure</h4>
+                <h4 className="text-lg font-bold text-gray-900 mb-3">5.2 Microsoft Azure</h4>
                 <p className="text-left md:text-justify mb-8">
-                  prioraos.com is hosted on Microsoft Azure (UK South region). Azure processes server log data as described in Section 2.2. Microsoft&apos;s data processing is subject to the Microsoft Data Protection Addendum and is governed by UK GDPR standard contractual clauses. Azure does not use your data for any purpose other than providing the hosting service.
+                  prioraos.com is hosted on Microsoft Azure Static Web Apps in the West Europe region (the Netherlands), within the European Economic Area. Azure processes server log data as described in Section 2.2. Microsoft&apos;s data processing is subject to the Microsoft Data Protection Addendum and is governed by UK GDPR standard contractual clauses. Azure does not use your data for any purpose other than providing the hosting service.
                 </p>
 
-                <h4 className="text-lg font-bold text-gray-900 mb-3">5.3 — Microsoft Azure Communication Services</h4>
+                <h4 className="text-lg font-bold text-gray-900 mb-3">5.3 Microsoft Azure Communication Services</h4>
                 <p className="text-left md:text-justify mb-8">
                   We use Microsoft Azure Communication Services to send email responses to contact form enquiries. Azure Communication Services processes your email address and message content only for the purpose of delivering the email. This processing is subject to the Microsoft Data Protection Addendum.
                 </p>
 
-                <h4 className="text-lg font-bold text-gray-900 mb-3">5.4 — Legal Disclosure</h4>
+                <h4 className="text-lg font-bold text-gray-900 mb-3">5.4 Legal Disclosure</h4>
                 <p className="text-left md:text-justify">
                   We may disclose personal data to law enforcement, regulatory authorities, or other public bodies where we are legally required to do so. We will notify you of any such disclosure unless we are legally prohibited from doing so.
                 </p>
@@ -176,7 +176,7 @@ const Privacy = () => {
 
               <Section title="7. INTERNATIONAL TRANSFERS">
                 <p className="text-left md:text-justify">
-                  Your personal data is processed and stored within the United Kingdom and the European Economic Area. We do not transfer personal data to countries outside these jurisdictions. Microsoft Azure operates our hosting services from UK South data centres, ensuring your data does not leave the United Kingdom.
+                  Your personal data is processed and stored within the United Kingdom and the European Economic Area. We do not transfer personal data to countries outside these jurisdictions. This website and its contact form handler run in Microsoft Azure's West Europe region, within the European Economic Area, and our API runs in Microsoft Azure data centres in the United Kingdom.
                 </p>
               </Section>
 
