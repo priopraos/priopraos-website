@@ -134,7 +134,7 @@ const Privacy = () => {
 
                 <h4 className="text-lg font-bold text-gray-900 mb-3">5.2 Microsoft Azure</h4>
                 <p className="text-left md:text-justify mb-8">
-                  prioraos.com is hosted on Microsoft Azure Static Web Apps in the West Europe region (the Netherlands), within the European Economic Area. Azure processes server log data as described in Section 2.2. Microsoft&apos;s data processing is subject to the Microsoft Data Protection Addendum and is governed by UK GDPR standard contractual clauses. Azure does not use your data for any purpose other than providing the hosting service.
+                  prioraos.com is hosted on Microsoft Azure. Azure processes server log data as described in Section 2.2. Microsoft&apos;s data processing is subject to the Microsoft Data Protection Addendum and is governed by UK GDPR standard contractual clauses. Azure does not use your data for any purpose other than providing the hosting service.
                 </p>
 
                 <h4 className="text-lg font-bold text-gray-900 mb-3">5.3 Microsoft Azure Communication Services</h4>
@@ -176,7 +176,7 @@ const Privacy = () => {
 
               <Section title="7. INTERNATIONAL TRANSFERS">
                 <p className="text-left md:text-justify">
-                  Your personal data is processed and stored within the United Kingdom and the European Economic Area. We do not transfer personal data to countries outside these jurisdictions. This website and its contact form handler run in Microsoft Azure's West Europe region, within the European Economic Area, and our API runs in Microsoft Azure data centres in the United Kingdom.
+                  Your personal data is processed and stored within the United Kingdom and the European Economic Area. We do not transfer personal data to countries outside these jurisdictions.
                 </p>
               </Section>
 
