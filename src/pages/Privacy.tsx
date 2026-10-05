@@ -176,7 +176,7 @@ const Privacy = () => {
 
               <Section title="7. INTERNATIONAL TRANSFERS">
                 <p className="text-left md:text-justify">
-                  Messages sent through the contact form are passed directly to our systems in the United Kingdom, where they are stored and handled. The website itself, including its server logs, is hosted within the United Kingdom and the European Economic Area. We do not transfer personal data to countries outside these jurisdictions.
+                  Messages sent through the contact form are stored and handled in the United Kingdom.
                 </p>
               </Section>
 
