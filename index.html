@@ -2,7 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- The current PrioraOS logo. favicon.svg was the earlier "Priora" roof
+         design, so the browser tab showed a different mark from the page. -->
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#005EB8" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -21,11 +27,11 @@
     <meta property="og:url" content="https://prioraos.com/" />
     
     <!-- Official Company Logo — High Quality PNG -->
-    <meta property="og:image" content="https://prioraos.com/prioraos_logo_updated.png" />
+    <meta property="og:image" content="https://prioraos.com/og-image.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="PrioraOS — Clinical Priority Infrastructure Logo" />
+    <meta property="og:image:alt" content="PrioraOS: clinical priority infrastructure for public health systems" />
     
     <!-- Locale & Language -->
     <meta property="og:locale" content="en_GB" />
@@ -37,7 +43,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="PrioraOS — Clinical Priority Infrastructure" />
     <meta name="twitter:description" content="Healthcare workforce intelligence for public health systems. Equity-directed deployment powered by open government data." />
-    <meta name="twitter:image" content="https://prioraos.com/prioraos_logo_updated.png" />
+    <meta name="twitter:image" content="https://prioraos.com/og-image.png" />
     <meta name="twitter:image:alt" content="PrioraOS Logo" />
     <meta name="twitter:domain" content="prioraos.com" />
     
@@ -53,6 +59,7 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://prioraos.com/" />
     
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://prioraos.com/#organization","name":"PrioraOS","legalName":"PrioraOS Ltd","url":"https://prioraos.com/","logo":"https://prioraos.com/icon-512.png","email":"contact@prioraos.com","subOrganization":{"@type":"Organization","name":"Locum Station","url":"https://locumstation.co.uk/"}},{"@type":"WebSite","@id":"https://prioraos.com/#website","name":"PrioraOS","url":"https://prioraos.com/","inLanguage":"en-GB","publisher":{"@id":"https://prioraos.com/#organization"}}]}</script>
   </head>
   <body>
     <div id="root"></div>

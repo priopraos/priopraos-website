@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -12,6 +12,7 @@ import Maintenance from './pages/Maintenance';
 
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
+import NotFound from './pages/NotFound';
 import CookieBanner from './components/CookieBanner';
 
 const STATUS_URL = 'https://api.locumstation.co.uk/api/prioraos-status';
@@ -61,7 +62,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
         <CookieBanner />

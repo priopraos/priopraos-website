@@ -13,6 +13,19 @@ import { useEffect } from 'react';
  */
 const ORIGIN = 'https://prioraos.com';
 
+/** Keep a page out of search results. Sets the existing robots tag to
+ *  noindex while the page is shown and puts it back afterwards. */
+export function useNoIndex() {
+  useEffect(() => {
+    let m = document.head.querySelector('meta[name="robots"]') as HTMLMetaElement | null;
+    const created = !m;
+    if (!m) { m = document.createElement('meta'); m.setAttribute('name', 'robots'); document.head.appendChild(m); }
+    const prev = m.content;
+    m.content = 'noindex';
+    return () => { if (created) m!.remove(); else m!.content = prev; };
+  }, []);
+}
+
 export function usePageMeta(title: string, description?: string) {
   useEffect(() => {
     const prevTitle = document.title;
