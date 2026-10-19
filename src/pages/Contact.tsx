@@ -14,6 +14,7 @@ const Contact = () => {
     role: '',
     enquiryType: '',
     message: '',
+    website: '', // honeypot: see the hidden field below
   });
 
   useEffect(() => {
@@ -208,6 +209,13 @@ const Contact = () => {
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#005EB8] focus:ring-2 focus:ring-[#005EB8]/20 outline-none transition-all resize-none"
                       placeholder="Your message"
                     />
+                  </div>
+                  {/* Honeypot. People never see or reach it (off-screen, out of the tab
+                      order, hidden from screen readers); bots fill every field. A
+                      filled one is thanked and dropped. */}
+                  <div aria-hidden="true" style={{ position: 'absolute', left: '-10000px', width: 1, height: 1, overflow: 'hidden' }}>
+                    <label htmlFor="website">Leave this field empty</label>
+                    <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" value={formData.website} onChange={handleChange} />
                   </div>
                   {error && (
                     <div className="flex items-start gap-3 bg-red-50 border border-red-200 rounded-xl px-4 py-3">
