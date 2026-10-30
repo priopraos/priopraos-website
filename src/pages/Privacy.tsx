@@ -27,7 +27,7 @@ const Privacy = () => {
           <div className="text-gray-600 leading-relaxed space-y-12 text-base">
               <div className="rounded-xl border border-gray-200 bg-gray-50/80 p-6 sm:p-8 space-y-3 text-sm">
                 <MetaRow label="Document:" value="Privacy Policy: prioraos.com" />
-                <MetaRow label="Version:" value="1.1" />
+                <MetaRow label="Version:" value="1.2" />
                 <MetaRow label="Last Updated:" value={LAST_UPDATED} />
                 <MetaRow label="Applies to:" value="prioraos.com and all subdomains" />
                 <MetaRow label="Company:" value="PrioraOS Ltd" />
@@ -81,7 +81,7 @@ const Privacy = () => {
 
                 <h4 className="text-lg font-bold text-gray-900 mb-3">2.3 Cookies</h4>
                 <p className="text-left md:text-justify">
-                  prioraos.com uses essential functional cookies only. These are required for the website to operate correctly. We do not use tracking cookies, advertising cookies, or third-party analytics cookies. A cookie notice appears on your first visit to the site. You may adjust your cookie preferences at any time through your browser settings. Disabling essential cookies may affect the functionality of the website.
+                  prioraos.com does not use cookies and does not store any information on your device. We do not use tracking, advertising or analytics technologies of any kind.
                 </p>
               </Section>
 
@@ -115,7 +115,6 @@ const Privacy = () => {
                 <ul className="list-disc pl-6 space-y-2 mb-4 text-left">
                   <li><strong className="text-gray-900">Contact form submissions:</strong> retained for three years from the date of submission, after which they are permanently deleted unless an ongoing business relationship has been established, in which case data is retained for the duration of that relationship plus two years.</li>
                   <li><strong className="text-gray-900">Server log data:</strong> retained for 90 days and then automatically deleted.</li>
-                  <li><strong className="text-gray-900">Cookie data:</strong> session cookies expire when you close your browser. Persistent functional cookies expire after 12 months.</li>
                 </ul>
                 <p className="text-left md:text-justify">
                   Where we are required by law to retain data for a longer period, we will do so. In all other cases, we apply the minimum retention period necessary for the legitimate purpose.

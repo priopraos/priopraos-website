@@ -223,7 +223,7 @@ const Home = () => {
                       The EFE™ is a rules-based algorithmic system that ranks temporary clinical postings by actual community need. Using open government data, it evaluates deprivation severity, workforce shortage, patient access pressure, and geographic remoteness to generate a composite equity score. The result is a strictly objective ranking where the highest-need communities always appear first, grounded entirely in independently published data rather than commercial logic.
                     </p>
                     <a href="/engine#efe" className="inline-block mt-3 text-sm font-semibold text-[#005EB8] hover:text-[#003087] hover:underline transition-colors">
-                      [Learn more]
+                      Learn more
                     </a>
                   </div>
                   <button
@@ -290,7 +290,7 @@ const Home = () => {
                       EquityMark™ is a professional recognition and credentialing system built around equity of deployment rather than commercial performance. Every confirmed engagement in a high-need community automatically contributes points toward a portable professional credential structured for professional revalidation, appraisal frameworks, and continuing professional development records. Across four progression levels, it transforms equity-directed clinical practice into a documented career record, giving every clinician a documented record of the communities they chose to serve.
                     </p>
                     <a href="/engine#equitymark" className="inline-block mt-3 text-sm font-semibold text-emerald-600 hover:text-emerald-800 hover:underline transition-colors">
-                      [Learn more]
+                      Learn more
                     </a>
                   </div>
                 </div>
@@ -316,7 +316,7 @@ const Home = () => {
                       The ECE™ translates EFE™ outputs into an independently sourced record of a provider organisation's equity-directed workforce activity. Every confirmed engagement is automatically logged with its community need assessment, equity grade, and any national health priority flags. Structured monthly reports are generated automatically in formats aligned with active statutory and regulatory obligations, ensuring that every provider's commitment to equitable healthcare access is continuously documented, independently verifiable, and audit-ready without any manual assembly.
                     </p>
                     <a href="/engine#ece" className="inline-block mt-3 text-sm font-semibold text-amber-600 hover:text-amber-800 hover:underline transition-colors">
-                      [Learn more]
+                      Learn more
                     </a>
                   </div>
                   <div className="order-last md:order-last">
@@ -335,7 +335,7 @@ const Home = () => {
                         </div>
                       </div>
                       <p className="text-xs text-gray-500 mt-3 text-center">
-                        Sample ECE™ report — formatted for CQC inspection and Social Value procurement submission
+                        Sample ECE™ report
                       </p>
                     </button>
                     <p className="text-xs text-gray-500 mt-2 text-center">
@@ -496,7 +496,7 @@ const Home = () => {
                     Currently deployed in the United Kingdom. The framework's data architecture is designed to support replication in Australia, Canada, and New Zealand, each of which publishes equivalent open government health and deprivation datasets.
                   </p>
                   <a href="/global" className="inline-block mt-3 text-sm font-semibold text-[#005EB8] hover:text-[#003087] hover:underline transition-colors">
-                    [Learn more]
+                    Learn more
                   </a>
                 </div>
               </div>
@@ -554,7 +554,7 @@ const Home = () => {
                         In England, the EFE™ is calibrated against the English Indices of Deprivation 2025, NHS England GP Workforce Statistics, NHS England patient registration data, the ONS Rural-Urban Classification, and OHID Fingertips condition prevalence data. Every shift is scored, graded, and recorded. Every clinician who works in higher-need communities builds a professional equity credential. Every provider receives compliance evidence aligned with the Health and Care Act 2022, the CQC Single Assessment Framework, Procurement Policy Note 002, and the NHS England Core20PLUS5 national health inequalities programme.
                       </p>
                       <a href="/locum-station" className="inline-block mt-3 text-sm font-semibold text-emerald-600 hover:text-emerald-800 hover:underline transition-colors">
-                        [Learn more]
+                        Learn more
                       </a>
                     </div>
                   </div>
