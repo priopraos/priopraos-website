@@ -41,11 +41,11 @@ const CANADA_DATA_SOURCES: { label: string; href: string }[] = [
   },
   {
     label: 'Pan-Canadian Health Inequalities Reporting Initiative — Health Canada',
-    href: 'https://www.canada.ca/en/public-health/services/publications/science-research-data/pan-canadian-health-inequalities-reporting-initiative.html',
+    href: 'https://health-infobase.canada.ca/health-inequalities/',
   },
   {
     label: 'OCAP® principles framework',
-    href: 'https://fnigc.ca/ocap/',
+    href: 'https://fnigc.ca/ocap-training/',
   },
 ];
 

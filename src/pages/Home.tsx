@@ -18,7 +18,7 @@ const USE_CASES = [
     label: 'Commissioning Bodies',
     icon: MapPin,
     heading: 'Commissioning Bodies',
-    body: 'Integrated care organisations, health boards, and commissioning authorities with statutory duties to reduce inequalities in access to health services. The ECE™ generates the evidence those duties require.',
+    body: 'Integrated care organisations, health boards, and commissioning authorities with statutory duties to reduce inequalities in access to health services. The ECE™ produces structured information to support reporting on those duties.',
     cta: { label: 'Learn More', to: '/contact' },
   },
   {
@@ -26,7 +26,7 @@ const USE_CASES = [
     label: 'Locum and Temporary Clinicians',
     icon: Users,
     heading: 'Locum and Temporary Clinicians',
-    body: 'Registered clinical professionals seeking meaningful temporary work in communities of genuine need. EquityMark™ recognises and professionally documents that contribution automatically.',
+    body: 'Registered clinical professionals seeking meaningful temporary work in communities of genuine need. EquityMark™ records that contribution automatically.',
     cta: { label: 'Learn More', to: '/contact' },
   },
   {
@@ -34,7 +34,7 @@ const USE_CASES = [
     label: 'Procurement Authorities',
     icon: Shield,
     heading: 'Procurement Authorities',
-    body: 'Public sector procurement bodies applying Social Value weighting to healthcare workforce contracts. The ECE™ report carries equity-directed workforce evidence for submission under national procurement policy frameworks.',
+    body: 'Public sector procurement bodies applying Social Value weighting to healthcare workforce contracts. The ECE™ report sets out equity-directed workforce activity relevant to national procurement policy frameworks.',
     cta: { label: 'Learn More', to: '/contact' },
   },
   {
@@ -42,7 +42,7 @@ const USE_CASES = [
     label: 'Academic and Research Partners',
     icon: GraduationCap,
     heading: 'Academic and Research Partners',
-    body: 'Health equity researchers, health policy institutions, and population health academic centres. PrioraOS makes anonymised, aggregated equity-scored workforce data available for commissioned research.',
+    body: 'Health equity researchers, health policy institutions, and population health academic centres. PrioraOS welcomes discussions about commissioned research using anonymised, aggregated equity-scored workforce data.',
     cta: { label: 'Learn More', to: '/contact' },
   },
   {
@@ -170,7 +170,7 @@ const Home = () => {
               </p>
               <blockquote className="relative pl-6 border-l-4 border-[#005EB8] rounded-r-xl py-4 pr-4">
                 <p className="text-lg text-gray-700 leading-relaxed italic">
-                  <strong>The highest-need communities get served first.</strong>
+                  <strong>The highest-need communities are shown first.</strong>
                 </p>
               </blockquote>
             </div>
@@ -255,12 +255,12 @@ const Home = () => {
                 <div className="grid md:grid-cols-2 gap-6 items-center">
                   <div className="order-last md:order-first">
                     <button
-                      onClick={() => { setLightboxImage('/Screenshot_5-6-2026_33435_.jpeg'); setLightboxAlt('EquityMark — clinician equity credential'); }}
+                      onClick={() => { setLightboxImage('/Screenshot_5-6-2026_33435_.jpeg'); setLightboxAlt('EquityMark — clinician equity record'); }}
                       className="relative group/image w-full"
                     >
                       <img
                         src="/Screenshot_5-6-2026_33435_.jpeg"
-                        alt="EquityMark — clinician equity credential"
+                        alt="EquityMark — clinician equity record"
                         className="rounded-xl w-full h-auto border border-gray-100 cursor-zoom-in transition-transform duration-300 group-hover/image:scale-[1.02]"
                       />
                       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/image:opacity-100 transition-opacity duration-300">
@@ -284,10 +284,10 @@ const Home = () => {
                       <h3 className="text-xl font-bold text-gray-900">EquityMark™</h3>
                     </div>
                     <p className="text-xs font-semibold text-emerald-600 uppercase tracking-wider mb-2 italic">
-                      A professional equity credential built from clinical practice.
+                      A professional equity record built from clinical practice.
                     </p>
                     <p className="text-gray-500 text-sm leading-relaxed text-left md:text-justify">
-                      EquityMark™ is a professional recognition and credentialing system built around equity of deployment rather than commercial performance. Every confirmed engagement in a high-need community automatically contributes points toward a portable professional credential structured for professional revalidation, appraisal frameworks, and continuing professional development records. Across four progression levels, it transforms equity-directed clinical practice into a documented career record, giving every clinician a documented record of the communities they chose to serve.
+                      EquityMark™ is a professional recognition system built around equity of deployment rather than commercial performance. Every confirmed engagement in a high-need community automatically contributes points toward a portable professional record, which may be used as supporting information for appraisal, and continuing professional development records. Across four progression levels, it transforms equity-directed clinical practice into a documented career record, giving every clinician a documented record of the communities they chose to serve.
                     </p>
                     <a href="/engine#equitymark" className="inline-block mt-3 text-sm font-semibold text-emerald-600 hover:text-emerald-800 hover:underline transition-colors">
                       Learn more
@@ -310,10 +310,10 @@ const Home = () => {
                       <h3 className="text-xl font-bold text-gray-900">The Equity Compliance Engine™</h3>
                     </div>
                     <p className="text-xs font-semibold text-amber-600 uppercase tracking-wider mb-2 italic">
-                      Records equity-directed activity as auditable evidence.
+                      Records equity-directed activity with its published sources.
                     </p>
                     <p className="text-gray-500 text-sm leading-relaxed text-left md:text-justify">
-                      The ECE™ translates EFE™ outputs into an independently sourced record of a provider organisation's equity-directed workforce activity. Every confirmed engagement is automatically logged with its community need assessment, equity grade, and any national health priority flags. Structured monthly reports are generated automatically in formats aligned with active statutory and regulatory obligations, ensuring that every provider's commitment to equitable healthcare access is continuously documented, independently verifiable, and audit-ready without any manual assembly.
+                      The ECE™ translates EFE™ outputs into an independently sourced record of a provider organisation's equity-directed workforce activity. Every confirmed engagement is automatically logged with its community need assessment, equity grade, and any national health priority flags. Structured monthly reports are generated automatically to support reporting under active statutory and regulatory duties, without any manual assembly.
                     </p>
                     <a href="/engine#ece" className="inline-block mt-3 text-sm font-semibold text-amber-600 hover:text-amber-800 hover:underline transition-colors">
                       Learn more
@@ -363,7 +363,7 @@ const Home = () => {
                 How It <span className="text-[#005EB8]">Works.</span>
               </h2>
               <p className="text-lg text-gray-500 leading-relaxed">
-                The platform transforms raw population health statistics into equity-directed workforce decisions grounded in independently verifiable open government data.
+                The platform transforms raw population health statistics into equity-directed workforce decisions grounded in open government data.
               </p>
             </div>
           </ScrollReveal>
@@ -386,7 +386,7 @@ const Home = () => {
                       </div>
                     </div>
                     <p className="text-gray-500 text-sm leading-relaxed text-left md:text-justify">
-                      A healthcare provider submits a request for clinical coverage. The EFE™ algorithm instantly cross-references the location and clinical specialty against national health, deprivation, and workforce datasets. It calculates a composite Clinical Need Score and assigns the posting an equity grade from A (Critical Need) to D (Lower Need). The grade reflects the genuine clinical need of the community the posting serves. Urgency, pay rate, and posting recency play no role in how the posting is ranked. Need alone determines priority.
+                      A GP practice or Primary Care Network publishes a session. The EFE™ algorithm instantly cross-references the location and clinical specialty against national health, deprivation, and workforce datasets. It calculates a composite Clinical Need Score and assigns the posting an equity grade from A (Critical Need) to D (Lower Need). The grade reflects the genuine clinical need of the community the posting serves. Urgency, pay rate, and posting recency play no role in how the posting is ranked. Need alone determines priority.
                     </p>
                   </div>
                   <div className="order-last md:order-last w-full">
@@ -451,7 +451,7 @@ const Home = () => {
                       </div>
                     </div>
                     <p className="text-gray-500 text-sm leading-relaxed text-left md:text-justify">
-                      Clinicians identify and respond to the highest-need postings first, simultaneously building their EquityMark™ credential with every confirmed engagement in a higher-need community. Healthcare providers increase the likelihood of fulfilling hard-to-fill clinical coverage and receive an automated structured compliance report from the Equity Compliance Engine™ documenting every confirmed engagement, the community it served, and the clinical need of that community, measured from independently published data.
+                      Clinicians identify and respond to the highest-need postings first, simultaneously building their EquityMark™ record with every confirmed engagement in a higher-need community. Practices see the measured need behind every session they post and receive an automated structured compliance report from the Equity Compliance Engine™ documenting every confirmed engagement, the community it served, and the clinical need of that community, measured from independently published data.
                     </p>
                   </div>
                 </div>
@@ -493,7 +493,7 @@ const Home = () => {
                     The PrioraOS framework is built for international deployment through jurisdictional data abstraction. The four scoring dimensions, deprivation, workforce shortage, patient access, and geographic remoteness, exist in every public health system. Wherever a government publishes open data measuring them, the engine can be recalibrated for that jurisdiction without reconstructing the core architecture.
                   </p>
                   <p className="text-gray-500 text-sm leading-relaxed text-left md:text-justify">
-                    Currently deployed in the United Kingdom. The framework's data architecture is designed to support replication in Australia, Canada, and New Zealand, each of which publishes equivalent open government health and deprivation datasets.
+                    Currently operating in the United Kingdom. The framework's data architecture is designed to support replication in Australia, Canada, and New Zealand, each of which publishes equivalent open government health and deprivation datasets.
                   </p>
                   <a href="/global" className="inline-block mt-3 text-sm font-semibold text-[#005EB8] hover:text-[#003087] hover:underline transition-colors">
                     Learn more
@@ -548,10 +548,10 @@ const Home = () => {
                     </div>
                     <div className="space-y-4">
                       <p className="text-gray-500 text-sm leading-relaxed text-left md:text-justify">
-                        Locum Station is the trading name under which PrioraOS operates within the United Kingdom's National Health Service. It is a fully built clinical shift posting platform powered by the complete PrioraOS engine suite, where every shift posted by an NHS provider is independently scored by community clinical need before any clinician sees it.
+                        Locum Station is the trading name under which PrioraOS operates within the United Kingdom's National Health Service. It is a clinical shift posting platform powered by the complete PrioraOS engine suite, where every shift posted by an NHS provider is independently scored by community clinical need before any clinician sees it.
                       </p>
                       <p className="text-gray-500 text-sm leading-relaxed text-left md:text-justify">
-                        In England, the EFE™ is calibrated against the English Indices of Deprivation 2025, NHS England GP Workforce Statistics, NHS England patient registration data, the ONS Rural-Urban Classification, and OHID Fingertips condition prevalence data. Every shift is scored, graded, and recorded. Every clinician who works in higher-need communities builds a professional equity credential. Every provider receives compliance evidence aligned with the Health and Care Act 2022, the CQC Single Assessment Framework, Procurement Policy Note 002, and the NHS England Core20PLUS5 national health inequalities programme.
+                        In England, the EFE™ is calibrated against the English Indices of Deprivation 2025, NHS England GP Workforce Statistics, NHS England patient registration data, the ONS Rural-Urban Classification, and OHID Fingertips condition prevalence data. Every shift is scored, graded, and recorded. Every clinician who works in higher-need communities builds an EquityMark™ record. Every provider receives compliance evidence aligned with the Health and Care Act 2022, the CQC Single Assessment Framework, Procurement Policy Note 002, and the NHS England Core20PLUS5 national health inequalities programme.
                       </p>
                       <a href="/locum-station" className="inline-block mt-3 text-sm font-semibold text-emerald-600 hover:text-emerald-800 hover:underline transition-colors">
                         Learn more
@@ -582,7 +582,7 @@ const Home = () => {
                 </div>
                 <div className="mt-6 pt-6 border-t border-gray-100">
                   <p className="text-gray-500 text-sm leading-relaxed text-left md:text-justify">
-                    Locum Station is currently accepting founding cohort registrations from NHS GP practices and Primary Care Networks, and from locum clinicians in ten roles registered with the GMC, NMC, HCPC or GPhC.
+                    Locum Station is open to NHS GP practices and Primary Care Networks in England, and to locum clinicians in thirteen roles registered with the GMC, NMC, HCPC, GPhC or Social Work England.
                   </p>
                 </div>
               </div>
@@ -666,7 +666,7 @@ const Home = () => {
                 </p>
                 <div className="bg-yellow-400 border border-yellow-300 rounded-2xl p-6 shadow-lg shadow-yellow-400/20">
                   <p className="text-[#003087] text-sm leading-relaxed italic font-medium">
-                    PrioraOS enables health system operators to deploy clinical resources based on measured population need rather than commercial urgency, transforming temporary workforce deployment into a measurable, documented equity intervention.
+                    PrioraOS enables health system operators to deploy clinical resources based on measured population need rather than commercial urgency, making temporary workforce deployment measurable and documented.
                   </p>
                 </div>
                 <div className="mt-4">
@@ -692,11 +692,11 @@ const Home = () => {
                   <span className="text-yellow-400 text-sm font-semibold uppercase tracking-wider">Commissioning and Planning Bodies</span>
                 </div>
                 <p className="text-lg text-blue-100/90 leading-relaxed mb-6">
-                  Health commissioning authorities, integrated care bodies, and planning organisations with obligations to reduce inequalities in access to health services. The ECE™ generates the independently sourced evidence those obligations require, produced automatically as a consequence of normal platform activity.
+                  Health commissioning authorities, integrated care bodies, and planning organisations with obligations to reduce inequalities in access to health services. The ECE™ produces independently sourced information to support reporting on those obligations, automatically as a consequence of normal platform activity.
                 </p>
                 <div className="bg-yellow-400 border border-yellow-300 rounded-2xl p-6 shadow-lg shadow-yellow-400/20">
                   <p className="text-[#003087] text-sm leading-relaxed italic font-medium">
-                    The Equity Compliance Engine™ produces structured, independently sourced documentation that satisfies equity reporting obligations and demonstrates active equity stewardship across a commissioning footprint.
+                    The Equity Compliance Engine™ produces structured, independently sourced documentation to support equity reporting across a commissioning footprint.
                   </p>
                 </div>
                 <div className="mt-4">
@@ -722,11 +722,11 @@ const Home = () => {
                   <span className="text-yellow-400 text-sm font-semibold uppercase tracking-wider">Temporary Clinical Professionals</span>
                 </div>
                 <p className="text-lg text-blue-100/90 leading-relaxed mb-6">
-                  Registered clinical professionals seeking temporary work in communities where they are needed most. EquityMark™ recognises and professionally documents that contribution automatically, building a portable credential that evidences equity-directed practice across any jurisdiction where the platform operates.
+                  Registered clinical professionals seeking temporary work in communities where they are needed most. EquityMark™ records that contribution automatically, building a portable record of equity-directed practice.
                 </p>
                 <div className="bg-yellow-400 border border-yellow-300 rounded-2xl p-6 shadow-lg shadow-yellow-400/20">
                   <p className="text-[#003087] text-sm leading-relaxed italic font-medium">
-                    Every confirmed engagement in a high-need community builds an equity credential: a professional record based on independently published data that documents contribution to reducing health inequality, structured for revalidation and continuing professional development frameworks.
+                    Every confirmed engagement in a high-need community adds to a professional record based on independently published data, which may be used as supporting information for appraisal.
                   </p>
                 </div>
                 <div className="mt-4">
@@ -754,11 +754,11 @@ const Home = () => {
                   <span className="text-yellow-400 text-sm font-semibold uppercase tracking-wider">Procurement and Social Value Bodies</span>
                 </div>
                 <p className="text-lg text-blue-100/90 leading-relaxed mb-6">
-                  Public sector procurement bodies and social value assessment authorities applying equity and social value weighting to healthcare workforce contracts. The ECE™ report carries equity-directed workforce evidence for submission under national procurement policy frameworks, with full data provenance from independently published government sources.
+                  Public sector procurement bodies and social value assessment authorities applying equity and social value weighting to healthcare workforce contracts. The ECE™ report sets out equity-directed workforce activity relevant to national procurement policy frameworks, with full data provenance from independently published government sources.
                 </p>
                 <div className="bg-yellow-400 border border-yellow-300 rounded-2xl p-6 shadow-lg shadow-yellow-400/20">
                   <p className="text-[#003087] text-sm leading-relaxed italic font-medium">
-                    PrioraOS generates procurement-ready documentation that quantifies Social Value contribution with independently verifiable evidence, enabling compliance without additional administrative burden.
+                    PrioraOS generates structured documentation relevant to Social Value reporting, with every figure traced to its published source and no additional administrative burden.
                   </p>
                 </div>
                 <div className="mt-4">
@@ -784,11 +784,11 @@ const Home = () => {
                   <span className="text-yellow-400 text-sm font-semibold uppercase tracking-wider">Academic and Research Partners</span>
                 </div>
                 <p className="text-lg text-blue-100/90 leading-relaxed mb-6">
-                  Health equity researchers, health policy institutions, and population health academic centres. PrioraOS provides access to anonymised, aggregated equity-scored workforce data to support collaborative research linking deployment patterns to population health outcomes.
+                  Health equity researchers, health policy institutions, and population health academic centres. PrioraOS welcomes discussions about collaborative research using anonymised, aggregated equity-scored workforce data.
                 </p>
                 <div className="bg-yellow-400 border border-yellow-300 rounded-2xl p-6 shadow-lg shadow-yellow-400/20">
                   <p className="text-[#003087] text-sm leading-relaxed italic font-medium">
-                    A continuously updated dataset linking workforce deployment decisions to independently published population health data, giving researchers an empirical foundation for health equity analysis.
+                    Workforce deployment linked to independently published population health data, as a potential foundation for health equity analysis.
                   </p>
                 </div>
                 <div className="mt-4">
@@ -818,7 +818,7 @@ const Home = () => {
                 </p>
                 <div className="bg-yellow-400 border border-yellow-300 rounded-2xl p-6 shadow-lg shadow-yellow-400/20">
                   <p className="text-[#003087] text-sm leading-relaxed italic font-medium">
-                    PrioraOS is ready for international deployment wherever governments publish open data measuring population health need. The core algorithmic logic transfers without reconstruction. Only the data inputs change.
+                    PrioraOS is designed to be recalibrated wherever governments publish open data measuring population health need. The core algorithmic logic transfers without reconstruction. Only the data inputs change.
                   </p>
                 </div>
                 <div className="mt-4">

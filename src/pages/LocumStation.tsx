@@ -12,7 +12,7 @@ const SHIFT_DETAIL_CAPTION =
   'Locum Station clinician shift detail view — community need profile, four dimension scores with named government data sources, Core20PLUS5 flag status, and EquityMark™ points preview displayed before the clinician applies.';
 
 const LocumStation = () => {
-  usePageMeta('Locum Station — Our NHS Workforce Platform | PrioraOS', 'Locum Station is the PrioraOS platform for NHS general practice: equity-scored locum shifts, an EquityMark™ clinician credential, and automated health inequalities reporting.');
+  usePageMeta('Locum Station — Our NHS Workforce Platform | PrioraOS', 'Locum Station is the PrioraOS platform for NHS general practice: equity-scored locum shifts, an EquityMark™ clinician record, and automated health inequalities reporting.');
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
   const [lightboxAlt, setLightboxAlt] = useState('');
   const [activeView, setActiveView] = useState<'jobBoard' | 'shiftDetail'>('jobBoard');
@@ -82,7 +82,7 @@ const LocumStation = () => {
             </div>
             <div className="text-lg text-gray-600 leading-relaxed space-y-6 text-left md:text-justify">
               <p>
-                Locum Station is a clinical shift posting service powered by the complete PrioraOS engine suite, connecting NHS healthcare providers with registered locum clinicians. Every shift posted is independently scored by community clinical need before any clinician sees it. Every confirmed engagement generates an automated compliance record. Every clinician who works in higher-need communities builds a professional equity credential.
+                Locum Station is a clinical shift posting service powered by the complete PrioraOS engine suite, used by NHS GP practices, Primary Care Networks and registered locum clinicians. Every shift posted is independently scored by community clinical need before any clinician sees it. Every confirmed engagement generates an automated compliance record. Every clinician who works in higher-need communities builds an EquityMark™ record.
               </p>
               <p>
                 It is a temporary clinical workforce service in which allocation priority is determined by clinical need measured from independently published data rather than commercial logic.
@@ -249,14 +249,14 @@ const LocumStation = () => {
                 </div>
               </div>
               <p className="text-lg text-gray-600 leading-relaxed text-left md:text-justify">
-                When a shift is fulfilled, the provider confirms which clinician worked it. The clinician confirms on their side. Both confirmations trigger the Equity Compliance Engine™, which generates the compliance record for that engagement. The clinician's EquityMark™ credential is updated automatically.
+                When a session has ended, the practice records whether the clinician attended, and either party can answer if the other does not respond. That record triggers the Equity Compliance Engine™, which generates the compliance record for the engagement, and the clinician's EquityMark™ record is updated automatically.
               </p>
             </div>
           </ScrollReveal>
 
                     <ScrollReveal delay={450}>
             <p className="mt-12 text-sm text-gray-500 leading-relaxed italic text-left md:text-justify">
-              <strong>Disclaimer:</strong> The EFE™ score and equity grade assigned to each posting express an assessment of community clinical need based on open government data inputs at the time of scoring. They do not constitute a clinical assessment, a health needs analysis, or a regulatory determination. The score reflects the data inputs available at the point of posting and is updated when those data sources are refreshed by their publishers. All source data is published under Crown copyright Open Government Licence v3.0 and is independently verifiable.
+              <strong>Disclaimer:</strong> The EFE™ score and equity grade assigned to each posting express an assessment of community clinical need based on open government data inputs at the time of scoring. They do not constitute a clinical assessment, a health needs analysis, or a regulatory determination. The score reflects the data inputs available at the point of posting and is updated when those data sources are refreshed by their publishers. All source data is published under Crown copyright Open Government Licence v3.0 and is publicly available.
             </p>
           </ScrollReveal>
         </div>
@@ -433,13 +433,13 @@ const LocumStation = () => {
                   </div>
                 </div>
                 <p className="text-gray-600 leading-relaxed mb-6 text-sm text-left md:text-justify">
-                  Every confirmed engagement in a higher-need community contributes to the clinician's EquityMark™ credential. The credential builds automatically, requires no manual submission, and generates a downloadable Contribution Report structured for GMC revalidation portfolios and continuing professional development records.
+                  Every confirmed engagement in a higher-need community contributes to the clinician's EquityMark™ record. The record builds automatically, requires no manual submission, and generates a downloadable Contribution Report that may be used as supporting information for appraisal.
                 </p>
                 <div className="space-y-3">
                   {[
-                    { icon: CheckCircle, label: 'EquityMark™ credential built automatically with every shift' },
-                    { icon: FileText, label: 'Downloadable Contribution Report structured for appraisal and revalidation' },
-                    { icon: CheckCircle, label: 'Formatted for CPD portfolio submission' },
+                    { icon: CheckCircle, label: 'EquityMark™ record built automatically with every shift' },
+                    { icon: FileText, label: 'Downloadable Contribution Report, which may be used as supporting information for appraisal' },
+                    { icon: CheckCircle, label: 'A complete record of the sessions you have worked' },
                     { icon: Award, label: 'Free to register and use the platform' },
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-3 bg-emerald-50/60 rounded-xl p-4 border border-emerald-100">
@@ -504,7 +504,7 @@ const LocumStation = () => {
                 </div>
                 <div className="bg-white/10 rounded-xl p-5 border border-white/20">
                   <div className="text-3xl font-extrabold text-yellow-300 mb-1">20%</div>
-                  <p className="text-sm text-blue-100">Automatic discount for Core20PLUS5-flagged practices</p>
+                  <p className="text-sm text-blue-100">A further discount for practices that publish a Core20PLUS5-flagged session</p>
                 </div>
               </div>
             </div>
@@ -528,11 +528,11 @@ const LocumStation = () => {
           <ScrollReveal>
             <span className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-full mb-6 border border-emerald-100">
               <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-              Founding Cohort — Open for Registration
+              Open to NHS General Practice in England
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-5">The Founding Cohort</h2>
             <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto mb-10 text-left md:text-justify">
-              Locum Station is currently open for founding cohort registration.
+              Locum Station is open to NHS general practice in England.
             </p>
             <div className="max-w-3xl mx-auto mb-10 rounded-2xl bg-white border border-gray-100 p-3 shadow-sm">
               <img
@@ -551,7 +551,7 @@ const LocumStation = () => {
               <div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">For Clinicians:</h3>
                 <p className="text-gray-600 leading-relaxed text-left md:text-justify">
-                  Ten clinical roles are supported, each holding statutory registration on a public register: GP Locum and Physician Associate (GMC); Practice Nurse and Advanced Nurse Practitioner (NMC); Paramedic, Physiotherapist, Occupational Therapist and Dietitian (HCPC); Clinical Pharmacist (GPhC); and Mental Health Practitioner (NMC or HCPC).
+                  Thirteen clinical roles are supported, each holding statutory registration on a public register: GP Locum and Physician Associate (GMC); Practice Nurse, Advanced Nurse Practitioner and Nursing Associate (NMC); Paramedic, Physiotherapist, Occupational Therapist, Dietitian and Podiatrist (HCPC); Clinical Pharmacist and Pharmacy Technician (GPhC); and Mental Health Practitioner (NMC, HCPC or Social Work England).
                 </p>
               </div>
             </div>

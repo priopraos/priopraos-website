@@ -79,7 +79,7 @@ const Footer = () => {
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="text-center space-y-1">
-            <p className="text-xs text-gray-500 leading-relaxed">
+            <p className="text-xs text-gray-300 leading-relaxed">
               © 2026 PrioraOS Ltd · Registered in England and Wales · Company No. 14688210 · ICO Registered: ZC159864
             </p>
                         <p className="text-xs text-yellow-400 leading-relaxed break-words">
@@ -94,7 +94,7 @@ const Footer = () => {
               </a>{' '}
               · support@locumstation.co.uk
             </p>
-            <p className="text-xs text-gray-600 leading-relaxed">
+            <p className="text-xs text-gray-300 leading-relaxed">
               All data published under Open Government Licence v3.0
             </p>
           </div>

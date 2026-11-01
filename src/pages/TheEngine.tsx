@@ -6,7 +6,7 @@ import { usePageMeta } from '../hooks/usePageMeta';
 
 
 const TheEngine = () => {
-  usePageMeta('The Engine — How PrioraOS Scores Clinical Need | PrioraOS', 'The scoring engine behind PrioraOS: how open government data on deprivation, workforce and geography becomes a single, auditable measure of community clinical need.');
+  usePageMeta('The Engine — How PrioraOS Scores Clinical Need | PrioraOS', 'The scoring engine behind PrioraOS: how open government data on deprivation, workforce and geography becomes a single, published measure of community clinical need.');
   useEffect(() => {
     const hash = window.location.hash;
     if (!hash) return;
@@ -41,7 +41,7 @@ const TheEngine = () => {
             <span className="text-yellow-300">One integrated equity intelligence system.</span>
           </h1>
           <p className="text-lg lg:text-xl text-blue-100 leading-relaxed max-w-3xl mx-auto">
-            Each innovation is independently valuable. Together they form a closed loop that ensures equitable workforce deployment is documented, recognised, and evidenced outcome.
+            Together they form a closed loop in which equitable workforce deployment is documented and recognised.
           </p>
         </div>
       </section>
@@ -95,7 +95,7 @@ const TheEngine = () => {
 
           <ScrollReveal delay={100}>
             <p className="text-lg text-gray-600 leading-relaxed mb-12 text-left md:text-justify">
-              The EFE™ is the algorithmic core of PrioraOS. Every temporary clinical posting submitted is automatically scored and ranked across four dimensions of community clinical need, drawn from independently published data. All inputs are drawn from open government data published under open licensing by national government bodies. Every score is independently verifiable against its published source. No patient data is accessed or processed at any stage.
+              The EFE™ is the algorithmic core of PrioraOS. Every temporary clinical posting submitted is automatically scored and ranked across four dimensions of community clinical need, drawn from independently published data. All inputs are drawn from open government data published under open licensing by national government bodies. Every score is taken from its published source. No patient data is accessed or processed at any stage.
             </p>
           </ScrollReveal>
 
@@ -188,7 +188,7 @@ const TheEngine = () => {
             {/* EFE Score Notice */}
             <div className="px-6 py-4 mb-12">
               <p className="text-lg text-gray-600 leading-relaxed text-left md:text-justify">
-                The EFE™ score and equity grade assigned to each posting express an assessment of community clinical need based on open government data inputs at the time of scoring. They do not constitute a clinical assessment, a health needs analysis, or a regulatory determination. All source data is published under open government licence and is independently verifiable.
+                The EFE™ score and equity grade assigned to each posting express an assessment of community clinical need based on open government data inputs at the time of scoring. They do not constitute a clinical assessment, a health needs analysis, or a regulatory determination. All source data is published under open government licence.
               </p>
             </div>
             
@@ -272,13 +272,13 @@ const TheEngine = () => {
               EquityMark™
             </h2>
             <p className="text-lg font-semibold text-emerald-600 mb-6 italic">
-              A professional equity credential built from clinical practice
+              A professional equity record built from clinical practice
             </p>
           </ScrollReveal>
 
           <ScrollReveal delay={100}>
             <p className="text-lg text-gray-600 leading-relaxed mb-6 text-left md:text-justify">
-              EquityMark™ builds automatically from confirmed clinical activity. Every confirmed engagement records the EFE™ grade of the community served, and that grade contributes a weighted point value to the clinician's cumulative credential. The process requires nothing from the clinician beyond completing the shift. Clinicians who choose to work in underserved communities now have an automatically generated record of that choice, structured for professional portfolios, revalidation, and appraisal.
+              EquityMark™ builds automatically from confirmed clinical activity. Every confirmed engagement records the EFE™ grade of the community served, and that grade contributes a weighted point value to the clinician's cumulative record. The process requires nothing from the clinician beyond completing the shift. Clinicians who choose to work in underserved communities have an automatically generated record of that choice, which may be used as supporting information for appraisal.
             </p>
           </ScrollReveal>
 
@@ -286,7 +286,7 @@ const TheEngine = () => {
           <ScrollReveal delay={150}>
             <h3 className="text-xl font-bold text-gray-900 mb-6">POINT ALLOCATION.</h3>
             <p className="text-lg text-gray-600 leading-relaxed mb-12 text-left md:text-justify">
-              EquityMark™ points are a weighting mechanism that ensures the credential accurately reflects the distribution of clinical need in the clinician's work pattern. A clinician who consistently works in Grade A communities builds a different credential from one who works primarily in Grade D communities, even if both have completed the same number of shifts. The points translate clinical activity into an independently verifiable equity record.
+              EquityMark™ points are a weighting mechanism that ensures the record accurately reflects the distribution of clinical need in the clinician's work pattern. A clinician who consistently works in Grade A communities builds a different record from one who works primarily in Grade D communities, even if both have completed the same number of shifts. The points translate clinical activity into a sourced equity record.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6">
               {[
@@ -318,7 +318,7 @@ const TheEngine = () => {
           <ScrollReveal delay={200}>
             <h3 className="text-xl font-bold text-gray-900 mb-6">THE FOUR PROGRESSION LEVELS.</h3>
             <p className="text-lg text-gray-600 leading-relaxed mb-12 text-left md:text-justify">
-              The four levels reflect a sustained pattern of health equity contribution, not a single engagement. They are structured to make a clinician's equity contribution visible and professionally credible within appraisal, revalidation, and continuing professional development frameworks.
+              The four levels reflect a sustained pattern of health equity contribution, not a single engagement. They make a clinician's recorded contribution visible, and may be used as supporting information for appraisal.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6">
               {[
@@ -336,13 +336,13 @@ const TheEngine = () => {
                 },
                 {
                   step: '03', level: 'Committed', threshold: '50 points',
-                  desc: 'Sustained contribution across multiple higher-need communities. Structured for CPD portfolio inclusion in the category of reducing health inequalities.',
+                  desc: 'Sustained contribution across multiple higher-need communities.',
                   color: '#ED8B00', iconBg: 'bg-amber-100', textColor: 'text-amber-700',
                   badgeBg: 'bg-amber-100', badgeText: 'text-amber-700',
                 },
                 {
                   step: '04', level: 'Exemplary', threshold: '120 points',
-                  desc: 'Distinguished record of health equity contribution. Structured as supporting information for professional revalidation in the categories of quality improvement, clinical leadership, and the active reduction of health inequalities.',
+                  desc: 'An extended record of health equity contribution across higher-need communities.',
                   color: '#2ECC71', iconBg: 'bg-emerald-100', textColor: 'text-emerald-700',
                   badgeBg: 'bg-emerald-100', badgeText: 'text-emerald-700',
                 },
@@ -370,7 +370,7 @@ const TheEngine = () => {
           <ScrollReveal delay={250}>
             <h3 className="text-xl font-bold text-gray-900 mb-6">THE CONTRIBUTION REPORT.</h3>
             <p className="text-lg text-gray-600 leading-relaxed mb-6 text-left md:text-justify">
-              At any point, a clinician can download a Contribution Report documenting every confirmed engagement, every community served, every EFE™ grade recorded, and their cumulative EquityMark™ score. The report is structured as supporting information for professional revalidation, appraisal frameworks, and continuing professional development records across all jurisdictions in which PrioraOS operates. It provides evidence of equity-directed clinical practice sourced entirely from open government data and platform activity records.
+              At any point, a clinician can download a Contribution Report documenting every confirmed engagement, every community served, every EFE™ grade recorded, and their cumulative EquityMark™ score. The report may be used as supporting information for appraisal and continuing professional development records across all jurisdictions in which PrioraOS operates. It provides evidence of equity-directed clinical practice sourced entirely from open government data and platform activity records.
             </p>
             
             <p className="text-sm text-gray-500 leading-relaxed mb-12 text-left md:text-justify italic">
@@ -394,7 +394,7 @@ const TheEngine = () => {
           {/* Transition to ECE */}
           <ScrollReveal delay={300}>
             <p className="text-lg font-semibold text-emerald-600 mb-6 italic text-left md:text-justify mt-12">
-              Every confirmed engagement generates two simultaneous records. For the clinician, it updates their EquityMark™ credential. For the provider, it creates a compliance record documenting that the workforce decision was informed by verified community clinical need. The Equity Compliance Engine™ generates the provider's record automatically, translating the same equity activity into the structured regulatory evidence that commissioners, inspectors, and procurement bodies require.
+              Every confirmed engagement generates two simultaneous records. For the clinician, it updates their EquityMark™ record. For the practice, it creates a compliance record of the session and the measured need of the community it served. The Equity Compliance Engine™ generates that record automatically, as structured information a practice can draw on when reporting to commissioners, inspectors and procurement bodies.
             </p>
           </ScrollReveal>
 
@@ -431,7 +431,7 @@ const TheEngine = () => {
 
           <ScrollReveal delay={100}>
             <p className="text-lg text-gray-600 leading-relaxed mb-12 text-left md:text-justify">
-              The ECE™ generates an independently auditable record of every provider organisation's equity-directed workforce activity. It produces the structured, verifiable evidence that health providers are required to demonstrate under active statutory and regulatory obligations, automatically, as a consequence of the equity-scored posting and confirmation process, without manual assembly or retrospective reporting.
+              The ECE™ generates a sourced record of every provider organisation's equity-directed workforce activity. It produces structured information to support a practice's reporting under active statutory and regulatory duties, automatically, as a consequence of the equity-scored posting and confirmation process, without manual assembly or retrospective reporting.
             </p>
           </ScrollReveal>
 
@@ -446,7 +446,7 @@ const TheEngine = () => {
                   'EFE™ composite score and equity grade',
                   'Individual scores for all four input dimensions with named data sources',
                   'Specialty Need Flag status',
-                  'Confirmation from both provider and clinician with timestamps',
+                  'How attendance was recorded, with timestamps',
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
@@ -558,7 +558,7 @@ const TheEngine = () => {
               The EFE™ formula and ECE™ compliance record architecture are designed for jurisdictional recalibration. The four scoring dimensions exist in every public health system with equivalent open government data infrastructure. International deployment requires only the substitution of jurisdiction-specific data inputs with equivalent national publications from the target jurisdiction. The algorithmic logic, grading system, compliance record structure, and EquityMark™ framework all transfer without reconstruction.
             </p>
             <p className="text-lg text-blue-100 leading-relaxed mb-10 text-left md:text-justify">
-              Currently deployed in the United Kingdom. The architecture supports future recalibration for Australia, Canada, and New Zealand using equivalent open government data.
+              Currently operating in the United Kingdom. The architecture supports future recalibration for Australia, Canada, and New Zealand using equivalent open government data.
             </p>
             <div className="text-center">
               <Link

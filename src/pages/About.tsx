@@ -66,7 +66,7 @@ const About = () => {
                 Equitable access to healthcare is a legal and policy duty, not an optional objective. PrioraOS aligns with the right to health under Article 12 of the International Covenant on Economic, Social and Cultural Rights, and with SDG 3 and SDG 10 commitments on health access and reduced inequalities.
               </p>
               <p className="text-left md:text-justify">
-                Where temporary workforce markets leave high-need communities underserved, these obligations are difficult to evidence in practice. PrioraOS provides an operational mechanism to target workforce deployment by measurable need and to produce auditable records that demonstrate whether equity commitments were actually delivered.
+                Where temporary workforce markets leave high-need communities underserved, these obligations are difficult to evidence in practice. PrioraOS provides an operational mechanism to target workforce deployment by measurable need and to produce sourced records of how temporary workforce was deployed.
               </p>
             </div>
           </ScrollReveal>
