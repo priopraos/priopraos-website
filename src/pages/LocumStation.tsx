@@ -82,7 +82,7 @@ const LocumStation = () => {
             </div>
             <div className="text-lg text-gray-600 leading-relaxed space-y-6 text-left md:text-justify">
               <p>
-                Locum Station is a clinical shift posting service powered by the complete PrioraOS engine suite, used by NHS GP practices, Primary Care Networks and registered locum clinicians. Every shift posted is independently scored by community clinical need before any clinician sees it. Every confirmed engagement generates an automated compliance record. Every clinician who works in higher-need communities builds an EquityMark™ record.
+                Locum Station provides an equity-focused digital service for NHS general practice, powered by the complete PrioraOS engine suite and used by NHS GP practices, Primary Care Networks and registered locum clinicians. Every shift posted is independently scored by community clinical need before any clinician sees it. Every confirmed engagement generates an automated compliance record. Every clinician who works in higher-need communities builds an EquityMark™ record.
               </p>
               <p>
                 It is a temporary clinical workforce service in which allocation priority is determined by clinical need measured from independently published data rather than commercial logic.
@@ -463,7 +463,7 @@ const LocumStation = () => {
                 What the Platform <span className="text-[#005EB8]">Does Not Do</span>
               </h2>
               <div className="text-gray-600 leading-relaxed space-y-4 text-left md:text-justify">
-                <p>PrioraOS Ltd provides equity data and analysis services for the temporary clinical sessions that registered GP practices and Primary Care Networks publish on Locum Station. It does not supply, employ or place clinicians, and it is not a party to the contract between any practice and any clinician.</p>
+                <p>Through Locum Station, PrioraOS Ltd provides an equity-focused digital service for NHS general practice, for the temporary clinical sessions that registered GP practices and Primary Care Networks publish. It does not supply, employ or place clinicians, and it is not a party to the contract between any practice and any clinician.</p>
                 <p>Locum Station does not employ or supply clinicians, negotiate or set clinical pay rates, or process payments between providers and clinicians. Providers pay clinicians directly by BACS transfer. Locum Station is not in the payment chain at any stage.</p>
                 <p>Locum Station does not access or process patient-identifiable data at any stage.</p>
                 <p>The EFE™ equity grade informs how a posting is presented in the discovery interface. It does not override provider decision-making and does not guarantee that any posting will be fulfilled. Providers should not rely solely on Locum Station for urgent or time-critical clinical staffing requirements. For time-critical cover, maintain parallel channels including NHS staff banks and direct clinician contacts.</p>

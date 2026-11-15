@@ -38,7 +38,7 @@ const About = () => {
             </div>
             <div className="text-lg text-gray-600 leading-relaxed space-y-6 mb-12">
               <p className="text-left md:text-justify">
-                PrioraOS Ltd is a healthcare technology company incorporated in England and Wales. We provide equity data and analysis services that help health systems direct temporary clinical workforce capacity toward communities with the greatest measurable need.
+                PrioraOS Ltd is a healthcare technology company incorporated in England and Wales. We provide equity-focused digital services that help health systems direct temporary clinical workforce capacity toward communities with the greatest measurable need.
               </p>
               <p className="text-left md:text-justify">
                 Our platform combines equity scoring, compliance evidence generation, and clinician recognition into one operational workflow. PrioraOS powers Locum Station in the United Kingdom and is designed for adaptation across international public health systems with compatible open data sources.
