@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { usePageMeta } from '../hooks/usePageMeta';
 
-const LAST_UPDATED = 'October 2026';
+const LAST_UPDATED = 'November 2026';
 
 const Terms = () => {
   usePageMeta('Terms of Service | PrioraOS', 'The terms governing use of the PrioraOS website and services, operated by PrioraOS Ltd.');
@@ -27,7 +27,7 @@ const Terms = () => {
           <div className="text-gray-600 leading-relaxed space-y-12 text-base">
               <div className="rounded-xl border border-gray-200 bg-gray-50/80 p-6 sm:p-8 space-y-3 text-sm">
                 <MetaRow label="Document:" value="Terms of Service: prioraos.com" />
-                <MetaRow label="Version:" value="1.1" />
+                <MetaRow label="Version:" value="1.2" />
                 <MetaRow label="Last Updated:" value={LAST_UPDATED} />
                 <MetaRow label="Applies to:" value="prioraos.com and all subdomains" />
                 <MetaRow label="Company:" value="PrioraOS Ltd" />
@@ -48,7 +48,7 @@ const Terms = () => {
                   prioraos.com is the institutional and investor-facing website of PrioraOS Ltd (Company No. 14688210), registered in England and Wales, with its registered office in London, England.
                 </p>
                 <p className="text-left md:text-justify mb-4">
-                  PrioraOS Ltd is a software-as-a-service company providing workforce data analytics and compliance reporting tools to healthcare provider organisations. The company operates Locum Station, a clinical shift posting service for the United Kingdom&apos;s National Health Service, at locumstation.co.uk.
+                  PrioraOS Ltd provides equity data and analysis services, including workforce data analysis and compliance reporting, to healthcare provider organisations. The company operates Locum Station, a clinical shift posting service for the United Kingdom&apos;s National Health Service, at locumstation.co.uk.
                 </p>
                 <p className="text-left md:text-justify">
                   This website provides information about PrioraOS Ltd, its proprietary technology, and its clinical workforce service. It does not provide clinical advice, regulatory advice, investment advice, or legal advice of any kind.
@@ -90,7 +90,7 @@ const Terms = () => {
 
               <Section title="4. NATURE OF THE SERVICE: IMPORTANT LEGAL STATEMENT">
                 <p className="text-left md:text-justify mb-4">
-                  PrioraOS Ltd is a software company. Locum Station, operated by PrioraOS Ltd at locumstation.co.uk, provides equity software services for the temporary clinical sessions that registered GP practices and Primary Care Networks publish on it.
+                  PrioraOS Ltd provides equity data and analysis services. Locum Station, operated by PrioraOS Ltd at locumstation.co.uk, provides those services for the temporary clinical sessions that registered GP practices and Primary Care Networks publish on it.
                 </p>
                 <p className="text-left md:text-justify mb-4">
                   PrioraOS Ltd is not an employment business or employment agency as defined under the Employment Agencies Act 1973 and the Conduct of Employment Agencies and Employment Businesses Regulations 2003. PrioraOS Ltd does not supply workers, intermediate the contractual relationship between healthcare providers and clinicians, set or negotiate clinical pay rates, or process payments between any parties. The contractual relationship for any clinical engagement conducted through Locum Station is solely between the relevant healthcare provider and the relevant clinician.

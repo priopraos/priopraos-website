@@ -463,7 +463,7 @@ const LocumStation = () => {
                 What the Platform <span className="text-[#005EB8]">Does Not Do</span>
               </h2>
               <div className="text-gray-600 leading-relaxed space-y-4 text-left md:text-justify">
-                <p>PrioraOS Ltd provides equity software services for the temporary clinical sessions that registered GP practices and Primary Care Networks publish on Locum Station. It is not an employment business or employment agency as defined under the Employment Agencies Act 1973, and it does not intermediate the contractual relationship between any provider and any clinician.</p>
+                <p>PrioraOS Ltd provides equity data and analysis services for the temporary clinical sessions that registered GP practices and Primary Care Networks publish on Locum Station. It does not supply, employ or place clinicians, and it is not a party to the contract between any practice and any clinician.</p>
                 <p>Locum Station does not employ or supply clinicians, negotiate or set clinical pay rates, or process payments between providers and clinicians. Providers pay clinicians directly by BACS transfer. Locum Station is not in the payment chain at any stage.</p>
                 <p>Locum Station does not access or process patient-identifiable data at any stage.</p>
                 <p>The EFE™ equity grade informs how a posting is presented in the discovery interface. It does not override provider decision-making and does not guarantee that any posting will be fulfilled. Providers should not rely solely on Locum Station for urgent or time-critical clinical staffing requirements. For time-critical cover, maintain parallel channels including NHS staff banks and direct clinician contacts.</p>
