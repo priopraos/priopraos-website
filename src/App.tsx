@@ -13,6 +13,11 @@ import Maintenance from './pages/Maintenance';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import NotFound from './pages/NotFound';
+import { lazy, Suspense } from 'react';
+
+// The methods page goes live with the Locum Station data hub (16 Nov 2026): compiled in only when switched on.
+const SHOW_METHODS = import.meta.env.VITE_SHOW_METHODS === '1';
+const Methods = SHOW_METHODS ? lazy(() => import('./pages/Methods')) : null;
 
 const STATUS_URL = 'https://api.locumstation.co.uk/api/prioraos-status';
 const POLL_INTERVAL_MS = 60_000; // re-check every 60 s
@@ -61,6 +66,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
+          {Methods && <Route path="/methods" element={<Suspense fallback={null}><Methods /></Suspense>} />}
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
