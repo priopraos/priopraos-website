@@ -88,7 +88,7 @@ const Methods = () => {
         <Section title="Keeping it traceable">
           <ul className="list-disc pl-5 space-y-2">
             <li>Each session keeps the score it was given when it was published, so a score can always be traced to the editions it used.</li>
-            <li>New editions are loaded as they are published, and the edition behind each figure is stated.</li>
+            <li>Editions are updated periodically, and the edition behind each figure is stated.</li>
             <li>No patient-identifiable data is used at any stage.</li>
           </ul>
         </Section>
